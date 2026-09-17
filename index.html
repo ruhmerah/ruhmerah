@@ -1,0 +1,4265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUHMERAH — Fine Jewelry, Handcrafted Warmth</title>
+<meta name="description" content="RUHMERAH — waterproof, anti-tarnish, hypoallergenic jewelry crafted with warmth. Elegant, timeless pieces for everyday luxury.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  .menu-btn{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.menu-btn{
+  display:block;
+}
+
+#mobileMenu{
+  position:fixed;
+  top:0;
+  left:-100%;
+  width:min(320px,100vw);
+  height:100vh;
+  background:white;
+  display:flex;
+  flex-direction:column;
+  padding:80px 24px;
+  transition:.3s;
+  z-index:1200;
+  box-shadow:0 24px 60px rgba(0,0,0,.18);
+  overflow-y:auto;
+}
+
+#mobileMenu a,
+#mobileMenu button{
+  margin:10px 0;
+  text-decoration:none;
+  color:#762820;
+  font-size:18px;
+  background:none;
+  border:none;
+  text-align:left;
+  cursor:pointer;
+  width:100%;
+  display:block;
+  padding:12px 0;
+  font-weight:400;
+}
+
+#mobileMenu > a,
+.mobile-menu-heading{
+  font-weight:600;
+}
+
+.mobile-menu-heading{
+  margin:10px 0;
+  color:#762820;
+}
+
+#mobileMenu.show{
+  left:0;
+}
+
+.mobile-submenu{
+  display:none;
+  padding-left:12px;
+}
+
+.mobile-submenu.open{
+  display:block;
+}
+
+.submenu-toggle{
+  appearance:none;
+  border:none;
+  background:none;
+  color:#762820;
+  font-size:18px;
+  padding:12px 0;
+  text-align:left;
+  width:100%;
+  cursor:pointer;
+}
+
+.mobile-menu-close{
+  align-self:flex-end;
+  font-size:26px;
+  line-height:1;
+  margin-bottom:28px;
+  color:#762820;
+}
+
+}
+/* Desktop */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .products {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+  }
+}
+
+/* NOTE: old duplicate .collections-container / .collections-side / .collection-card
+   block that used to sit here has been REMOVED. The single authoritative
+   definition now lives in the "Collections editorial" section below. */
+
+.arrival-banner{
+    display:block;
+    width:100%;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.arrival-banner img{
+    width:100%;
+    height:550px;   /* Increase or decrease as needed */
+    object-fit:cover;
+    display:block;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.arrival-banner:hover img{
+    transform:scale(1.03);
+}
+/* Happy Customers Counter */
+
+.happy-customers{
+    width:100%;
+    background:#fff6e8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.counter-box{
+    text-align:center;
+    width:100%;
+}
+
+.counter-box h1{
+    font-size:75px;      /* Reduced from 110px */
+    font-weight:700;
+    color:#762820;
+    line-height:1;
+    margin:0;
+    letter-spacing:2px;
+}
+
+.counter-box p{
+    margin-top:10px;
+    font-size:20px;      /* Reduced from 28px */
+    font-weight:500;
+    color:#555;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+  .icon-link {
+    text-decoration: none;
+    display: inline-flex;
+
+}
+
+  :root{
+    --bg:#FFFFFF;
+    --heading:#762820;
+    --cta:#762820;
+    --cta-hover:#5E1F24;
+    --gold:#C89A4A;
+    --gold-soft:#C89A4A33;
+    --body-text:#2D2D2D;
+    --muted:#6B6B6B;
+    --card:#FFFFFF;
+    --border:#EFE6D7;
+    --shadow: rgba(0,0,0,.05);
+    --radius:18px;
+    --font-head:'Playfair Display', serif;
+    --font-body:'Poppins', sans-serif;
+    --ease: cubic-bezier(.4,0,.2,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--body-text);
+    font-family:var(--font-body);
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:var(--font-body);cursor:pointer;border:none;background:none;}
+  h1,h2,h3,h4{font-family:var(--font-head);color:var(--heading);font-weight:500;line-height:1.2;}
+  .eyebrow{
+    font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);
+    font-weight:600;margin-bottom:10px;display:block;
+  }
+  .section-head{text-align:center;max-width:640px;margin:0 auto 52px;}
+  .section-head h2{font-size:clamp(28px,4vw,42px);}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:15px;font-weight:300;}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 40px;}
+  section{padding:100px 0;}
+  :focus-visible{outline:2px solid var(--heading);outline-offset:3px;}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 36px;border-radius:40px;
+    font-family:var(--font-body);font-weight:600;font-size:13px;
+    letter-spacing:1.5px;text-transform:uppercase;
+    transition:all .3s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--cta);color:var(--bg);}
+  .btn-primary:hover{background:var(--cta-hover);transform:translateY(-3px);box-shadow:0 14px 30px rgba(94,31,36,.25);}
+  .btn-outline{background:transparent;color:var(--heading);border:1.4px solid var(--heading);}
+  .btn-outline:hover{background:var(--heading);color:var(--bg);transform:translateY(-3px);}
+  .btn-ghost-light{background:transparent;color:#fff;border:1.4px solid rgba(255,255,255,.75);}
+  .btn-ghost-light:hover{background:#fff;color:var(--heading);transform:translateY(-3px);}
+
+  /* Jali pattern divider */
+  .jali-divider{height:26px;width:100%;opacity:.55;
+    background-image:radial-gradient(circle, var(--gold) 1px, transparent 1.4px);
+    background-size:26px 26px; background-position:center;
+    mask-image:linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+  }
+
+  /* Gold underline hover */
+  .underline-hover{position:relative;}
+  .underline-hover::after{
+    content:'';position:absolute;left:0;bottom:-4px;width:0;height:1.5px;background:var(--gold);
+    transition:width .3s var(--ease);
+  }
+  .underline-hover:hover::after{width:100%;}
+
+  /* ===== Cookie banner ===== */
+  .cookie-banner{
+    position:fixed;left:20px;right:20px;bottom:20px;z-index:999;
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:20px 26px;max-width:520px;box-shadow:0 20px 50px var(--shadow);
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    transform:translateY(160%);transition:transform .5s var(--ease);
+  }
+  .cookie-banner.show{transform:translateY(0);}
+  .cookie-banner p{font-size:13px;color:var(--muted);flex:1;min-width:220px;}
+  .cookie-banner .btn{padding:10px 22px;font-size:11px;}
+
+  /* ===== Announcement bar ===== */
+  .announce{
+    background:var(--heading);color:var(--bg);text-align:center;
+    font-size:12.5px;letter-spacing:.6px;font-weight:500;
+    height:38px;overflow:hidden;position:relative;cursor:pointer;
+  }
+  .announce-track{position:relative;height:100%;}
+  .announce-item{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    opacity:0;transform:translateY(100%);transition:all .5s var(--ease);
+  }
+  .announce-item.active{opacity:1;transform:translateY(0);}
+
+  /* ===== Header ===== */
+  header.site-header.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+
+    transition:background .35s var(--ease), box-shadow .35s var(--ease), padding .35s var(--ease);
+    background:#ffffff;
+}
+  .header-inner{
+    max-width:1320px;margin:0 auto;padding:22px 40px;
+    display:flex;align-items:center;justify-content:space-between;gap:30px;
+    transition:padding .35s var(--ease);
+  }
+  header.site-header.scrolled .header-inner{padding:14px 40px;}
+  .logo{
+    width:300px;
+    height:auto;
+    display:block;
+
+}
+  .transparent-mode .logo,
+  .transparent-mode .main-nav a,
+  .transparent-mode .icon-btn{ color:#762820; }
+  .transparent-mode .icon-btn svg{stroke:#762820;}
+
+  .main-nav{display:flex;gap:34px;align-items:center;}
+  .main-nav a{font-size:13.5px;letter-spacing:.5px;font-weight:500;position:relative;padding:6px 0;}
+  .nav-icons{display:flex;align-items:center;gap:20px;}
+  .icon-btn{position:relative;color:var(--heading);}
+  .icon-btn svg{width:20px;height:20px;stroke:var(--heading);fill:none;stroke-width:1.5;transition:transform .25s var(--ease);}
+  .icon-btn:hover svg{transform:scale(1.12);stroke:var(--gold);}
+  .badge{
+    position:absolute;top:-8px;right:-9px;background:var(--gold);color:#fff;
+    font-size:10px;font-weight:600;width:16px;height:16px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hamburger{display:none;position:relative;z-index:10001;}
+
+/* mega menu */
+.mega-wrap{position:relative;}
+
+.mega-menu{
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%) translateY(10px);
+
+    width:max-content;
+    min-width:180px;
+
+    background:var(--card);
+    border-radius:16px;
+
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+    border:1px solid var(--border);
+
+    padding:15px 20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:all .3s var(--ease);
+    z-index:400;
+}
+.mega-wrap.mobile-open .mega-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateX(-50%) translateY(0);
+}  .mega-col h4{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-family:var(--font-body);font-weight:600;}
+  .mega-col a{display:block;font-size:14px;color:var(--body-text);padding:7px 0;transition:color .2s;}
+  .mega-col a:hover{color:var(--heading);padding-left:4px;}
+
+  /* search panel */
+  .search-panel{
+    position:fixed;inset:0;background:rgba(45,45,45,.4);z-index:800;
+    opacity:0;visibility:hidden;transition:opacity .3s var(--ease);
+    display:flex;align-items:flex-start;justify-content:center;
+  }
+  .search-panel.open{opacity:1;visibility:visible;}
+  .search-box{
+    margin-top:100px;background:var(--bg);width:min(640px,90vw);border-radius:18px;
+    padding:36px;box-shadow:0 30px 80px rgba(0,0,0,.25);
+    transform:translateY(-20px);transition:transform .35s var(--ease);
+  }
+  .search-panel.open .search-box{transform:translateY(0);}
+  .search-input-wrap{position:relative;border-bottom:1.4px solid var(--heading);padding-bottom:12px;}
+  .search-input-wrap input{
+    width:100%;background:none;border:none;font-family:var(--font-head);font-size:22px;
+    color:var(--heading);outline:none;
+  }
+  .search-input-wrap input::placeholder{color:var(--muted);opacity:.8;font-style:italic;}
+  .search-close{position:absolute;top:36px;right:36px;font-size:22px;color:var(--muted);}
+
+  /* ===== Hero ===== */
+  .hero{position:relative;height:92vh;min-height:620px;overflow:hidden;}
+  .hero-slide{
+    position:absolute;inset:0;opacity:0;transition:opacity 1s var(--ease);
+    display:flex;align-items:center;
+  }
+  .hero-slide.active{opacity:1;}
+  .hero-slide .wrap{position:relative;z-index:2;}
+  .hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+}
+
+.hero-bg video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg, rgba(45,20,18,.42), rgba(45,20,18,.06) 60%);z-index:1;}
+  .hero-content{max-width:560px;color:#fff;}
+  .hero-content .eyebrow{color:var(--gold);}
+  .hero-content h1{font-size:clamp(38px,5.4vw,68px);color:#fff;font-style:italic;font-weight:500;}
+  .hero-content p{margin:22px 0 34px;font-size:16px;color:rgba(255,255,255,.86);max-width:440px;}
+  .hero-nav{
+    position:absolute;bottom:38px;left:0;right:0;z-index:3;
+    display:flex;justify-content:center;gap:12px;align-items:center;
+  }
+  .hero-dot{width:34px;height:3px;background:rgba(255,255,255,.35);border-radius:3px;transition:background .3s;}
+  .hero-dot.active{background:var(--gold);}
+  .hero-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+    width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.5);
+    display:flex;align-items:center;justify-content:center;color:#fff;transition:all .25s;
+  }
+  .hero-arrow:hover{background:#fff;color:var(--heading);}
+  .hero-arrow.prev{left:32px;} .hero-arrow.next{right:32px;}
+
+  /* ===== Trust bar (highlighted) ===== */
+  .trust-bar{
+    background:linear-gradient(180deg,#fff9ef,#fdf0da);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    padding:38px 0;
+  }
+  .trust-bar .wrap{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+  }
+  .trust-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:16px;
+    letter-spacing:.3px;
+    color:var(--heading);
+    font-weight:700;
+    background:#fff;
+    border:1.5px solid var(--gold);
+    padding:16px 26px;
+    border-radius:50px;
+    box-shadow:0 10px 26px rgba(118,40,32,.08);
+    flex:1 1 200px;
+    justify-content:center;
+    text-align:center;
+    transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+  }
+  .trust-item:hover{
+    transform:translateY(-5px);
+    background:var(--heading);
+    color:#fff;
+    box-shadow:0 18px 36px rgba(118,40,32,.2);
+  }
+  .trust-item:hover svg{stroke:var(--bg);}
+  .trust-item svg{
+    width:28px;
+    height:28px;
+    stroke:var(--gold);
+    fill:none;
+    stroke-width:1.8;
+    flex-shrink:0;
+    transition:stroke .25s var(--ease);
+  }
+
+  /* ===== Category grid ===== */
+  .cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:26px;}
+  .cat-card{text-align:center;}
+  .cat-circle{
+    width:100%;aspect-ratio:1;border-radius:50%;background:var(--card);
+    border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px var(--shadow);transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+    position:relative;overflow:hidden;
+  }
+  .cat-card:hover .cat-circle{transform:translateY(-8px);box-shadow:0 22px 44px rgba(118,40,32,.14);}
+  .cat-circle svg{width:44%;height:44%;stroke:var(--heading);fill:none;stroke-width:1.2;transition:stroke .3s;}
+  .cat-card:hover svg{stroke:var(--gold);}
+  .cat-card h3{margin-top:16px;font-size:14.5px;font-family:var(--font-body);font-weight:500;color:var(--body-text);}
+
+  /* ===== Product cards ===== */
+  .prod-grid{display:grid;gap:28px;}
+  .prod-card{
+    background:var(--card);border-radius:var(--radius);overflow:hidden;
+    border:1px solid var(--border);box-shadow:0 8px 24px var(--shadow);
+    transition:transform .35s var(--ease), box-shadow .35s var(--ease);position:relative;
+  }
+  .prod-card:hover{transform:translateY(-6px);box-shadow:0 24px 46px rgba(118,40,32,.12);}
+  .prod-media{
+    aspect-ratio:1/1.08;position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .prod-media svg{width:52%;height:52%;stroke:var(--heading);fill:none;stroke-width:1;transition:transform .5s var(--ease);}
+  .prod-card:hover .prod-media svg{transform:scale(1.08) rotate(-2deg);}
+  .prod-badge{
+    position:absolute;top:14px;left:14px;background:var(--heading);color:var(--bg);
+    font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:600;
+    padding:6px 12px;border-radius:20px;z-index:2;
+  }
+  .wishlist-btn{
+    position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;
+    background:#fff;display:flex;align-items:center;justify-content:center;z-index:2;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);transition:transform .25s;
+  }
+  .wishlist-btn:hover{transform:scale(1.1);}
+  .wishlist-btn svg{width:16px;height:16px;stroke:var(--heading);fill:none;stroke-width:1.6;transition:.2s;}
+  .wishlist-btn.active svg{fill:var(--heading);stroke:var(--heading);}
+  .quick-view-btn{
+    position:absolute;left:14px;right:14px;bottom:-50px;background:var(--heading);color:var(--bg);
+    text-align:center;padding:12px;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;
+    border-radius:10px;font-weight:600;transition:bottom .3s var(--ease), background .2s;z-index:2;
+  }
+  .prod-card:hover .quick-view-btn{bottom:14px;}
+  .quick-view-btn:hover{background:var(--cta-hover);}
+  .prod-info{padding:20px 20px 22px;}
+  .prod-info .cat-label{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;}
+  .prod-info h3{font-size:16px;margin:8px 0 8px;font-weight:500;}
+  .prod-price{display:flex;align-items:center;gap:10px;}
+  .price-now{color:var(--heading);font-weight:600;font-size:15px;}
+  .price-was{color:var(--muted);text-decoration:line-through;font-size:13px;}
+  .stars{color:var(--gold);font-size:12px;margin-top:6px;letter-spacing:1px;}
+
+  .tab-row{display:flex;justify-content:center;gap:10px;margin-bottom:48px;flex-wrap:wrap;}
+  .tab-btn{
+    padding:10px 22px;border-radius:24px;font-size:12.5px;letter-spacing:.6px;
+    border:1px solid var(--border);color:var(--muted);transition:all .25s;
+  }
+  .tab-btn.active,.tab-btn:hover{background:var(--heading);color:var(--bg);border-color:var(--heading);}
+
+  /* ===== New Arrivals: product cards + swipeable carousel ===== */
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    overflow:hidden;box-shadow:0 8px 24px var(--shadow);
+    transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+    display:flex;flex-direction:column;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(118,40,32,.12);}
+  .image-box{position:relative;aspect-ratio:1/1.05;overflow:hidden;background:#fff6e8;}
+  .image-box img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease);}
+  .card:hover .image-box img{transform:scale(1.06);}
+  .wishlist{
+    position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;
+    background:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:16px;color:var(--heading);box-shadow:0 4px 12px rgba(0,0,0,.12);
+    cursor:pointer;transition:transform .25s ease;border:none;
+  }
+  .wishlist:hover{transform:scale(1.12);}
+  .info{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1;}
+  .category{font-size:10.5px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+  .name{font-size:14.5px;font-weight:500;color:var(--heading);margin-bottom:6px;line-height:1.4;font-family:var(--font-head);}
+  .rating{color:var(--gold);font-size:12px;letter-spacing:1px;margin-bottom:8px;}
+  .price{font-size:16px;font-weight:600;color:var(--heading);margin-bottom:14px;}
+  .price .old{font-size:12.5px;color:var(--muted);text-decoration:line-through;font-weight:400;margin-left:8px;}
+  .buttons{margin-top:auto;}
+  .buttons .cart{
+    width:100%;background:var(--cta);color:#fff;border:none;padding:11px;
+    border-radius:8px;font-size:12px;font-weight:600;letter-spacing:.5px;
+    text-transform:uppercase;cursor:pointer;transition:background .25s ease;
+  }
+  .buttons .cart:hover{background:var(--cta-hover);}
+
+  .arrivals-carousel{position:relative;}
+  .arrivals-track{
+    display:flex;gap:20px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scroll-behavior:smooth;
+    padding:6px 6px 14px;
+    scrollbar-width:none;
+  }
+  .arrivals-track::-webkit-scrollbar{display:none;}
+  .arrivals-track .card{flex:0 0 auto;width:250px;scroll-snap-align:start;}
+  .arrivals-controls{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:28px;}
+  .arrivals-arrow{
+    width:42px;height:42px;border-radius:50%;border:1.4px solid var(--border);
+    display:flex;align-items:center;justify-content:center;color:var(--heading);
+    transition:all .25s var(--ease);flex-shrink:0;
+  }
+  .arrivals-arrow:hover{background:var(--heading);border-color:var(--heading);color:#fff;}
+  .arrivals-arrow svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;}
+  .arrivals-dots{display:flex;align-items:center;gap:8px;}
+  .arrivals-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .3s var(--ease);cursor:pointer;}
+  .arrivals-dot.active{width:22px;border-radius:5px;background:var(--gold);}
+
+  /* ===== Collections editorial (single source of truth for these classes) ===== */
+  .collections-container{
+      display:flex;
+      gap:26px;
+  }
+  .collections-side{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      gap:26px;
+  }
+  .collection-card{
+      position:relative;
+      border-radius:var(--radius);
+      overflow:hidden;
+      min-height:260px;
+      display:flex;
+      align-items:flex-end;
+      padding:34px;
+      color:#fff;
+      background-color:var(--gold-soft);
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+  }
+  .collection-card::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, transparent 40%, rgba(45,20,18,.72));
+      z-index:0;
+      pointer-events:none;
+  }
+  .collection-card .cc-content{position:relative;z-index:1;}
+  .collection-card .eyebrow{color:var(--gold);}
+  .collection-card h3{color:#fff;font-size:24px;margin:6px 0 12px;}
+  .collection-card a{font-size:12px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:3px;}
+
+  /* ===== Personalized ===== */
+  .personalized{background:var(--card);}
+  .personalized-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .personalized-media{
+    aspect-ratio:1;border-radius:var(--radius);background:var(--bg);
+    border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;
+  }
+  .personalized-media svg{width:46%;stroke:var(--heading);fill:none;stroke-width:1;}
+  .personalized-text .eyebrow{color:var(--gold);}
+  .personalized-text h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:20px;}
+  .personalized-text p{color:var(--muted);margin-bottom:30px;max-width:460px;}
+  .p-feature{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;}
+  .p-feature svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.6;flex-shrink:0;margin-top:2px;}
+  .p-feature b{display:block;font-size:14.5px;color:var(--heading);margin-bottom:2px;}
+  .p-feature span{font-size:13px;color:var(--muted);}
+
+  /* ===== Testimonials (swipeable carousel) ===== */
+  .testi-carousel{position:relative;}
+  .testi-track{
+    display:flex;gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scroll-behavior:smooth;
+    padding:6px 6px 10px;
+    scrollbar-width:none;
+  }
+  .testi-track::-webkit-scrollbar{display:none;}
+  .testi-card{
+    flex:0 0 auto;
+    width:340px;
+    scroll-snap-align:start;
+    background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);
+    padding:34px;box-shadow:0 8px 24px var(--shadow);
+    display:flex;flex-direction:column;
+  }
+  .testi-product-photo{
+    width:100%;
+    aspect-ratio:4/3;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:20px;
+    flex-shrink:0;
+    border:1.5px solid var(--border);
+    background:#fff6e8;
+  }
+  .testi-product-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .testi-quote-mark{
+    font-family:var(--font-head);
+    font-size:52px;
+    line-height:1;
+    color:var(--gold);
+    opacity:.8;
+    margin-bottom:8px;
+    font-style:italic;
+  }
+  .testi-card .stars{margin-bottom:14px;font-size:14px;}
+  .testi-card p{font-size:14.5px;color:var(--body-text);font-style:italic;margin-bottom:22px;line-height:1.7;flex:1;}
+  .testi-who b{font-size:14px;display:block;color:var(--heading);}
+  .testi-who span{font-size:11.5px;color:var(--muted);}
+
+  .testi-controls{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:32px;}
+  .testi-arrow{
+    width:42px;height:42px;border-radius:50%;border:1.4px solid var(--border);
+    display:flex;align-items:center;justify-content:center;color:var(--heading);
+    transition:all .25s var(--ease);flex-shrink:0;
+  }
+  .testi-arrow:hover{background:var(--heading);border-color:var(--heading);color:#fff;}
+  .testi-arrow svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;}
+  .testi-dots{display:flex;align-items:center;gap:8px;}
+  .testi-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .3s var(--ease);cursor:pointer;}
+  .testi-dot.active{width:22px;border-radius:5px;background:var(--gold);}
+
+  /* ===== Write a Review ===== */
+  .review-form-wrap{max-width:560px;margin:10px auto 0;text-align:center;}
+  .review-toggle-btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:transparent;border:1.4px solid var(--heading);color:var(--heading);
+    padding:14px 30px;border-radius:40px;font-size:12.5px;font-weight:600;
+    letter-spacing:1px;text-transform:uppercase;transition:all .3s var(--ease);
+  }
+  .review-toggle-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;}
+  .review-toggle-btn:hover{background:var(--heading);color:#fff;}
+  .review-form-wrap.open .review-toggle-btn{display:none;}
+
+  .review-form{
+    display:none;text-align:left;
+    background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);
+    padding:34px;box-shadow:0 8px 24px var(--shadow);margin-top:6px;
+  }
+  .review-form-wrap.open .review-form{display:block;}
+  .review-form h3{font-size:20px;margin-bottom:6px;}
+  .review-form-note{font-size:12.5px;color:var(--muted);margin-bottom:22px;}
+  .review-field{margin-bottom:18px;}
+  .review-field label{display:block;font-size:12.5px;font-weight:600;color:var(--heading);margin-bottom:7px;}
+  .review-field input[type="text"],
+  .review-field textarea{
+    width:100%;padding:13px 14px;border:1.4px solid var(--border);border-radius:10px;
+    font-family:var(--font-body);font-size:14px;outline:none;background:#fffdfa;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .review-field input[type="text"]:focus,
+  .review-field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,154,74,.15);}
+  .review-field textarea{height:100px;resize:none;}
+  .review-field input[type="file"]{font-size:12.5px;color:var(--muted);}
+  .review-photo-preview{display:none;margin-top:12px;width:90px;height:90px;object-fit:cover;border-radius:12px;border:1.5px solid var(--gold);}
+  .review-stars-input{display:flex;gap:6px;}
+  .review-star{font-size:26px;color:var(--border);line-height:1;transition:color .15s ease, transform .15s ease;}
+  .review-star:hover{transform:scale(1.15);}
+  .review-star.active{color:var(--gold);}
+  .review-message{font-size:12.5px;padding:11px 14px;border-radius:8px;margin-bottom:16px;display:none;}
+  .review-message.success{display:block;background:#edf9f1;color:#276749;}
+  .review-message.error{display:block;background:#fff1ef;color:#c0392b;}
+  .review-submit-btn{width:100%;justify-content:center;}
+  .review-submit-btn:disabled{opacity:.6;cursor:not-allowed;}
+
+  /* ===== Social Channels (RUHMERAH themed) ===== */
+  .social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .social-card{
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    background:linear-gradient(180deg,#fff9ef,#fdf1de);
+    border:1.5px solid var(--gold);border-radius:var(--radius);
+    padding:42px 28px;transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+  }
+  .social-card:hover{transform:translateY(-8px);box-shadow:0 22px 46px rgba(118,40,32,.18);}
+  .social-icon{
+    width:64px;height:64px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:20px;transition:transform .35s var(--ease);
+    box-shadow:0 0 0 4px rgba(200,154,74,.28), 0 10px 22px rgba(0,0,0,.12);
+  }
+  .social-card:hover .social-icon{transform:scale(1.08) rotate(-4deg);}
+  .social-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.6;}
+  .social-card h3{font-size:18px;margin-bottom:8px;}
+  .social-card p{font-size:13px;color:var(--muted);margin-bottom:22px;line-height:1.6;}
+  .social-card .social-link{
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;font-weight:600;
+    padding:13px 28px;border-radius:30px;transition:all .3s var(--ease);
+    background:var(--cta);color:#fff;
+  }
+  .social-card:hover .social-link{
+    background:var(--cta-hover);
+  }
+  .social-card.ig .social-icon{background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);}
+  .social-card.fb .social-icon{background:#1877F2;}
+  .social-card.wa .social-icon{background:#25D366;}
+
+  /* ===== Blog (swipeable carousel) ===== */
+  .blog-carousel{position:relative;}
+  .blog-track{
+    display:flex;gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scroll-behavior:smooth;
+    padding:6px 6px 10px;
+    scrollbar-width:none;
+  }
+  .blog-track::-webkit-scrollbar{display:none;}
+  .blog-card{
+    flex:0 0 auto;
+    width:320px;
+    scroll-snap-align:start;
+    border-radius:var(--radius);overflow:hidden;background:var(--card);
+    border:1px solid var(--border);box-shadow:0 8px 24px var(--shadow);
+    transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+    display:flex;flex-direction:column;
+  }
+  .blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(118,40,32,.12);}
+  .blog-media{aspect-ratio:16/11;background:var(--bg);position:relative;overflow:hidden;flex-shrink:0;}
+  .blog-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease);}
+  .blog-card:hover .blog-media img{transform:scale(1.06);}
+  .blog-category-tag{
+    position:absolute;top:12px;left:12px;background:#fff;color:var(--heading);
+    font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
+    padding:6px 10px;border-radius:30px;box-shadow:0 4px 12px rgba(0,0,0,.12);
+  }
+  .blog-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;}
+  .blog-body h3{font-size:17px;margin-bottom:10px;line-height:1.4;}
+  .blog-body p{font-size:13.5px;color:var(--muted);margin-bottom:18px;line-height:1.6;flex:1;}
+  .blog-read{
+    align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:1px;text-transform:uppercase;font-weight:600;
+    color:var(--heading);border-bottom:1px solid var(--gold);padding-bottom:2px;
+    transition:gap .25s var(--ease);
+  }
+  .blog-read:hover{gap:12px;}
+
+  .blog-controls{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:32px;}
+  .blog-arrow{
+    width:42px;height:42px;border-radius:50%;border:1.4px solid var(--border);
+    display:flex;align-items:center;justify-content:center;color:var(--heading);
+    transition:all .25s var(--ease);flex-shrink:0;
+  }
+  .blog-arrow:hover{background:var(--heading);border-color:var(--heading);color:#fff;}
+  .blog-arrow svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;}
+  .blog-dots{display:flex;align-items:center;gap:8px;}
+  .blog-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .3s var(--ease);cursor:pointer;}
+  .blog-dot.active{width:22px;border-radius:5px;background:var(--gold);}
+
+  /* Tighter vertical rhythm for these three consecutive sections only */
+  #testimonialsSection,
+  #socialSection,
+  #blogSection{
+    padding:60px 0;
+  }
+
+  /* ===== Newsletter ===== */
+  .newsletter-section{background:var(--heading);color:var(--bg);text-align:center;position:relative;overflow:hidden;}
+  .newsletter-section h2{color:var(--bg);font-size:clamp(26px,3.6vw,38px);}
+  .newsletter-section p{color:rgba(255,246,232,.75);margin:16px 0 30px;}
+  .newsletter-form{display:flex;justify-content:center;gap:12px;max-width:460px;margin:0 auto;flex-wrap:wrap;}
+  .newsletter-form input{
+    flex:1;min-width:220px;padding:16px 22px;border-radius:40px;border:1px solid rgba(255,246,232,.3);
+    background:rgba(255,246,232,.06);color:var(--bg);font-family:var(--font-body);outline:none;
+  }
+  .newsletter-form input::placeholder{color:rgba(255,246,232,.55);}
+
+  /* ===== Footer ===== */
+  footer{background:#5E1F24;color:rgba(255,246,232,.82);padding:80px 0 0;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(255,246,232,.14);}
+  .footer-logo{font-family:var(--font-head);font-size:24px;color:var(--bg);letter-spacing:2px;margin-bottom:16px;}
+  .footer-grid p{font-size:13px;line-height:1.8;color:rgba(255,246,232,.65);max-width:260px;}
+  .footer-col h4{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-family:var(--font-body);font-weight:600;}
+  .footer-col a{display:block;font-size:13.5px;padding:6px 0;color:rgba(255,246,232,.75);transition:color .2s;}
+  .footer-col a:hover{color:var(--gold);}
+  .footer-socials{display:flex;gap:12px;margin-top:18px;}
+  .footer-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,246,232,.3);display:flex;align-items:center;justify-content:center;padding:0;}
+  .footer-socials svg{width:15px;height:15px;stroke:var(--bg);fill:none;stroke-width:1.6;}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:26px 0;flex-wrap:wrap;gap:14px;}
+  .footer-bottom span{font-size:12px;color:rgba(255,246,232,.55);}
+  .pay-icons{display:flex;gap:8px;flex-wrap:wrap;}
+  .pay-icons span{
+    font-size:10px;font-weight:600;letter-spacing:.5px;color:var(--heading);background:var(--bg);
+    padding:7px 12px;border-radius:6px;
+  }
+
+  /* ===== Cart Drawer ===== */
+  .overlay{position:fixed;inset:0;background:rgba(45,20,18,.4);z-index:900;opacity:0;visibility:hidden;transition:opacity .35s var(--ease);}
+  .overlay.open{opacity:1;visibility:visible;}
+  .cart-drawer{
+    position:fixed;top:0;right:0;bottom:0;width:min(440px,92vw);background:var(--bg);z-index:950;
+    box-shadow:-20px 0 60px rgba(0,0,0,.18);transform:translateX(100%);transition:transform .4s var(--ease);
+    display:flex;flex-direction:column;
+  }
+  .cart-drawer.open{transform:translateX(0);}
+  .cart-head{padding:26px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+  .cart-head h3{font-size:19px;}
+  .cart-ship{padding:18px 28px;border-bottom:1px solid var(--border);}
+  .cart-ship p{font-size:12.5px;color:var(--heading);margin-bottom:10px;font-weight:500;}
+  .ship-bar{height:5px;background:var(--border);border-radius:6px;overflow:hidden;}
+  .ship-fill{height:100%;background:var(--gold);width:35%;transition:width .4s var(--ease);}
+  .cart-items{flex:1;overflow-y:auto;padding:18px 28px;}
+  .cart-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border);}
+  .cart-thumb{width:76px;height:86px;border-radius:12px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .cart-thumb svg{width:60%;stroke:var(--heading);fill:none;stroke-width:1;}
+  .cart-item-info{flex:1;}
+  .cart-item-info h4{font-size:13.5px;font-weight:500;color:var(--body-text);margin-bottom:4px;}
+  .cart-item-info span{font-size:11.5px;color:var(--muted);}
+  .cart-item-price{font-size:13px;color:var(--heading);font-weight:600;margin-top:8px;}
+  .cart-empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:13.5px;}
+  .cart-empty svg{width:44px;stroke:var(--border);fill:none;stroke-width:1;margin:0 auto 16px;}
+  .cart-foot{padding:22px 28px 28px;border-top:1px solid var(--border);}
+  .cart-coupon{display:flex;gap:8px;margin-bottom:16px;}
+  .cart-coupon input{flex:1;padding:12px 16px;border-radius:30px;border:1px solid var(--border);font-size:12.5px;outline:none;background:var(--card);}
+  .cart-coupon button{padding:12px 18px;border-radius:30px;background:var(--card);border:1px solid var(--heading);color:var(--heading);font-size:11.5px;font-weight:600;}
+  .cart-gift{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin-bottom:16px;}
+  .cart-total{display:flex;justify-content:space-between;font-size:15px;color:var(--heading);font-weight:600;margin-bottom:16px;}
+  .cart-foot .btn{width:100%;justify-content:center;}
+
+  /* Quick view modal */
+  .qv-modal{
+    position:fixed;top:50%;left:50%;transform:translate(-50%,-45%);width:min(820px,92vw);max-height:88vh;overflow:auto;
+    background:var(--bg);border-radius:20px;z-index:960;box-shadow:0 40px 100px rgba(0,0,0,.3);
+    opacity:0;visibility:hidden;transition:all .35s var(--ease);
+  }
+  .qv-modal.open{opacity:1;visibility:visible;transform:translate(-50%,-50%);}
+  .qv-inner{display:grid;grid-template-columns:1fr 1fr;}
+  .qv-media{background:var(--card);display:flex;align-items:center;justify-content:center;min-height:380px;}
+  .qv-media svg{width:50%;stroke:var(--heading);fill:none;stroke-width:1;}
+  .qv-body{padding:40px;position:relative;}
+  .qv-close{position:absolute;top:18px;right:18px;font-size:20px;color:var(--muted);}
+  .qv-body .cat-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+  .qv-body h3{font-size:26px;margin:10px 0 12px;}
+  .qv-body .prod-price{margin-bottom:16px;}
+  .qv-body .qv-desc{font-size:13.5px;color:var(--muted);margin-bottom:22px;}
+  .qv-highlights{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px;}
+  .qv-highlights span{font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;background:var(--card);border:1px solid var(--border);padding:7px 12px;border-radius:20px;color:var(--heading);}
+  .qv-actions{display:flex;gap:12px;}
+
+  /* Exit popup */
+  .exit-popup{
+    position:fixed;inset:0;background:rgba(45,20,18,.5);z-index:970;
+    display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s var(--ease);
+  }
+  .exit-popup.open{opacity:1;visibility:visible;}
+  .exit-card{
+    background:var(--bg);border-radius:20px;padding:52px;max-width:460px;text-align:center;position:relative;
+    transform:scale(.92);transition:transform .35s var(--ease);
+  }
+  .exit-popup.open .exit-card{transform:scale(1);}
+  .exit-card .eyebrow{color:var(--gold);}
+  .exit-card h3{font-size:28px;margin:8px 0 14px;}
+  .exit-card p{color:var(--muted);font-size:13.5px;margin-bottom:26px;}
+  .exit-close{position:absolute;top:18px;right:22px;font-size:20px;color:var(--muted);}
+
+  /* floating buttons */
+  .float-btns{position:fixed;right:26px;bottom:26px;z-index:400;display:flex;flex-direction:column;gap:14px;align-items:flex-end;}
+  .fab{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.18);transition:transform .25s;}
+  .fab:hover{transform:translateY(-4px);}
+  .fab-whatsapp{background:#25D366;}
+  .fab-whatsapp svg{width:24px;stroke:#fff;fill:#fff;}
+  .fab-top{background:var(--heading);opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s var(--ease);}
+  .fab-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+  .fab-top svg{width:18px;stroke:var(--bg);fill:none;stroke-width:2;}
+
+  /* toast */
+  .toast{
+    position:fixed;top:26px;left:50%;transform:translateX(-50%) translateY(-30px);z-index:1000;
+    background:var(--heading);color:var(--bg);padding:14px 26px;border-radius:30px;font-size:13px;
+    box-shadow:0 14px 30px rgba(0,0,0,.2);opacity:0;visibility:hidden;transition:all .35s var(--ease);
+  }
+  .toast.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+/* ===== Login Reminder Popup ===== */
+
+.login-reminder{
+    position:fixed;
+    inset:0;
+    background:rgba(45,20,18,.48);
+    z-index:99999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .3s ease;
+}
+
+.login-reminder.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.login-reminder-card{
+    width:min(430px,90vw);
+    background:#fff6e8;
+    border-radius:22px;
+    padding:42px 32px;
+    text-align:center;
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+
+    transform:translateY(20px) scale(.96);
+    transition:transform .35s ease;
+}
+
+.login-reminder.show .login-reminder-card{
+    transform:translateY(0) scale(1);
+}
+
+.login-reminder-card .eyebrow{
+    color:#C89A4A;
+}
+
+.login-reminder-card h2{
+    font-size:30px;
+    margin:8px 0 12px;
+}
+
+.login-reminder-card p{
+    color:#6B6B6B;
+    font-size:13.5px;
+    line-height:1.7;
+    margin-bottom:26px;
+}
+
+.login-reminder-actions{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.login-reminder-login{
+    width:100%;
+    justify-content:center;
+}
+
+.login-reminder-later{
+    color:#762820;
+    font-size:12px;
+    padding:10px;
+    text-decoration:underline;
+    text-underline-offset:4px;
+}
+
+.login-reminder-close{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:20px;
+    color:#6B6B6B;
+}
+
+.login-reminder-card{
+    position:relative;
+}
+
+@media(max-width:600px){
+    .login-reminder-card{
+        padding:36px 24px;
+    }
+
+    .login-reminder-card h2{
+        font-size:26px;
+    }
+}
+
+/* ===== Footer Info Popups (Customer Care / Track Order / Shipping Policy) ===== */
+
+.footer-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(45,20,18,.48);
+    z-index:99999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .3s ease;
+}
+
+.footer-popup.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.footer-popup-card{
+    position:relative;
+    width:min(430px,100%);
+    max-height:86vh;
+    overflow-y:auto;
+    background:#fff6e8;
+    border-radius:22px;
+    padding:44px 34px;
+    text-align:center;
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+
+    transform:translateY(20px) scale(.96);
+    transition:transform .35s ease;
+}
+
+.footer-popup.show .footer-popup-card{
+    transform:translateY(0) scale(1);
+}
+
+.footer-popup-card .eyebrow{
+    color:var(--gold);
+}
+
+.footer-popup-card h2{
+    font-size:28px;
+    margin:8px 0 14px;
+}
+
+.footer-popup-card p{
+    color:var(--muted);
+    font-size:13.5px;
+    line-height:1.75;
+    margin-bottom:22px;
+}
+
+.footer-popup-phone{
+    display:block;
+    font-family:var(--font-head);
+    font-size:26px;
+    color:var(--heading);
+    font-weight:600;
+    margin-bottom:24px;
+    letter-spacing:.5px;
+}
+
+.footer-popup-actions{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.footer-popup-call{
+    width:100%;
+    justify-content:center;
+}
+
+.footer-popup-later{
+    color:var(--heading);
+    font-size:12px;
+    padding:10px;
+    text-decoration:underline;
+    text-underline-offset:4px;
+}
+
+.footer-popup-close{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:20px;
+    line-height:1;
+    color:var(--muted);
+    width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+@media(max-width:600px){
+    .footer-popup-card{
+        padding:36px 24px;
+    }
+
+    .footer-popup-card h2{
+        font-size:24px;
+    }
+
+    .footer-popup-phone{
+        font-size:22px;
+    }
+}
+
+  /* Responsive */
+  @media(max-width:1100px){
+    .prod-grid{grid-template-columns:repeat(2,1fr);}
+    .cat-grid{grid-template-columns:repeat(3,1fr);}
+    .personalized-inner{grid-template-columns:1fr;gap:36px;}
+    .testi-card{width:300px;}
+    .blog-card{width:290px;}
+    .social-grid{grid-template-columns:repeat(3,1fr);gap:18px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+
+  #mobileMenu{
+  display:none;
+}
+
+  @media(max-width:760px){
+
+/* =========================
+   MOBILE RUHMERAH NAVBAR
+   ========================= */
+
+header.site-header.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:70px;
+    background:#ffffff !important;
+    z-index:9999;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.header-inner{
+    width:100%;
+    max-width:none;
+    height:70px;
+    padding:0 14px;
+    display:grid;
+    grid-template-columns:38px 1fr auto;
+    align-items:center;
+    gap:8px;
+}
+
+/* Hamburger */
+.hamburger{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;
+    height:38px;
+    color:#762820;
+    flex-shrink:0;
+}
+
+.hamburger svg{
+    width:23px;
+    height:23px;
+    stroke:#762820;
+}
+
+/* Logo — sits in the middle grid column, so it's truly
+   centered in the LEFTOVER space and can never slide
+   under the hamburger or the icon cluster */
+.header-inner > a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-width:0;
+}
+
+.header-inner > a .logo{
+    width:135px;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* Right-side icons */
+.nav-icons{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+.nav-icons .icon-btn{
+    width:34px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+}
+
+.nav-icons .icon-btn svg{
+    width:19px;
+    height:19px;
+    stroke:#762820;
+}
+
+/* Hide desktop navigation */
+.main-nav{
+    display:none;
+}
+
+/* Mobile menu */
+#mobileMenu{
+    display:flex;
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:min(320px,85vw);
+    height:100vh;
+    background:#ffffff;
+    flex-direction:column;
+    padding:85px 25px 30px;
+    transition:left .3s ease;
+    z-index:10000;
+    box-shadow:10px 0 40px rgba(0,0,0,.15);
+    overflow-y:auto;
+}
+
+#mobileMenu.show{
+    left:0;
+}
+
+#mobileMenu a,
+#mobileMenu button{
+    color:#762820;
+}
+
+.mobile-menu-close{
+    align-self:flex-end;
+    font-size:25px;
+    color:#762820;
+    margin-bottom:20px;
+}
+
+/* Prevent hero/content from sitting behind fixed navbar */
+body{
+    padding-top:70px;
+}
+
+/* =========================
+   REST OF MOBILE STYLES
+   ========================= */
+
+.wrap{
+    padding:0 16px;
+}
+
+section{
+    padding:50px 0;
+}
+
+#testimonialsSection,
+#socialSection,
+#blogSection{
+    padding:36px 0;
+}
+
+.hero{
+    min-height:520px;
+}
+
+.hero-content{
+    max-width:100%;
+    padding:0 12px;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:clamp(30px,8vw,50px);
+}
+
+.hero-content p{
+    margin-bottom:20px;
+}
+
+.hero-nav{
+    position:static;
+    transform:none;
+    justify-content:center;
+    gap:10px;
+    padding-top:18px;
+}
+
+.hero-arrow{
+    display:none;
+}
+
+.hero-dot{
+    margin:0 4px;
+}
+
+.cat-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+}
+
+.prod-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+}
+
+.prod-card{
+    width:100%;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.social-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.social-card{
+    padding:20px 8px;
+}
+
+.social-icon{
+    width:46px;
+    height:46px;
+    margin-bottom:12px;
+    box-shadow:0 0 0 3px rgba(200,154,74,.28), 0 6px 14px rgba(0,0,0,.12);
+}
+
+.social-icon svg{
+    width:19px;
+    height:19px;
+}
+
+.social-card h3{
+    font-size:12.5px;
+    margin-bottom:0;
+}
+
+.social-card p{
+    display:none;
+}
+
+.social-card .social-link{
+    display:none;
+}
+
+.blog-track{
+    gap:14px;
+    padding:4px 4px 8px;
+}
+
+.blog-card{
+    width:82vw;
+}
+
+.blog-body{
+    padding:18px 18px 20px;
+}
+
+.blog-body h3{
+    font-size:15px;
+}
+
+.blog-body p{
+    font-size:12.5px;
+    margin-bottom:14px;
+}
+
+.blog-controls{
+    margin-top:22px;
+    gap:16px;
+}
+
+.blog-arrow{
+    display:none;
+}
+
+#arrivalsTabs{
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    overflow-x:auto;
+    scrollbar-width:none;
+    gap:8px;
+    margin-bottom:28px;
+    padding-bottom:2px;
+}
+
+#arrivalsTabs::-webkit-scrollbar{
+    display:none;
+}
+
+#arrivalsTabs .tab-btn{
+    flex:0 0 auto;
+    padding:9px 16px;
+    font-size:11.5px;
+    white-space:nowrap;
+}
+
+.arrivals-track{
+    gap:12px;
+    padding:4px 4px 10px;
+}
+
+.arrivals-track .card{
+    width:62vw;
+}
+
+.info{
+    padding:14px 14px 16px;
+}
+
+.name{
+    font-size:13px;
+}
+
+.arrivals-controls{
+    margin-top:18px;
+    gap:16px;
+}
+
+.arrivals-arrow{
+    display:none;
+}
+
+.testi-track{
+    gap:14px;
+    padding:4px 4px 8px;
+}
+
+.testi-card{
+    width:82vw;
+    padding:26px 22px;
+}
+
+.testi-product-photo{
+    margin-bottom:14px;
+}
+
+.testi-card p{
+    font-size:13.5px;
+    margin-bottom:18px;
+}
+
+.testi-controls{
+    margin-top:22px;
+    gap:16px;
+}
+
+.testi-arrow{
+    display:none;
+}
+
+.review-form-wrap{
+    margin-top:14px;
+}
+
+.review-form{
+    padding:24px 20px;
+}
+
+.review-form h3{
+    font-size:18px;
+}
+
+.review-star{
+    font-size:30px;
+}
+
+.qv-inner{
+    grid-template-columns:1fr;
+}
+
+.trust-bar{
+    padding:24px 0;
+}
+.trust-bar .wrap{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    text-align:center;
+}
+.trust-item{
+    flex-direction:column;
+    gap:8px;
+    font-size:12.5px;
+    padding:18px 10px;
+    border-radius:16px;
+}
+.trust-item svg{
+    width:24px;
+    height:24px;
+}
+.trust-item:last-child{
+    grid-column:1 / -1;
+}
+
+/* Collections — mobile overrides (2-column grid, same class, only these props change) */
+.collections-container{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+}
+.collections-side{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    width:auto;
+}
+.collection-card{
+    padding:20px;
+    min-height:200px;
+    width:100%;
+}
+.collection-card .cc-content{
+    width:100%;
+}
+
+.section-head{
+    margin-bottom:40px;
+}
+
+.section-head p{
+    font-size:14px;
+}
+
+.footer-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.cart-drawer{
+    width:100vw;
+    max-width:100%;
+}
+
+.newsletter-form{
+    flex-direction:column;
+}
+
+.newsletter-form input{
+    width:100%;
+}
+}
+
+@media(max-width:380px){
+
+    .header-inner{
+        grid-template-columns:34px 1fr auto;
+        padding:0 10px;
+        gap:4px;
+    }
+
+    .hamburger{
+        width:34px;
+        height:34px;
+    }
+
+    .header-inner > a .logo{
+        width:110px;
+    }
+
+    .nav-icons{
+        gap:5px;
+    }
+
+    .nav-icons .icon-btn{
+        width:28px;
+        height:34px;
+    }
+
+    .nav-icons .icon-btn svg{
+        width:17px;
+        height:17px;
+    }
+
+}
+
+/* =========================================================
+   THE ONE YOU JUST FELL FOR...
+   Instagram Ad Products Section
+   ========================================================= */
+
+.fell-for-section{
+    background:#FFFFFF;
+    padding:100px 0;
+}
+
+.fell-for-section .section-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 52px;
+}
+
+.fell-for-section .section-head h2{
+    font-family:var(--font-head);
+    color:var(--heading);
+    font-size:clamp(28px,4vw,42px);
+    font-weight:500;
+    line-height:1.2;
+    margin:0;
+}
+
+.fell-for-section .section-head p{
+    color:var(--muted);
+    margin-top:14px;
+    font-size:15px;
+    font-weight:300;
+}
+
+/* Product grid */
+.fell-for-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+}
+
+/* Product card */
+.fell-for-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 8px 24px var(--shadow);
+    transition:
+        transform .35s var(--ease),
+        box-shadow .35s var(--ease);
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+
+.fell-for-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(118,40,32,.12);
+}
+
+/* Product image */
+.fell-for-image{
+    position:relative;
+    aspect-ratio:1/1.05;
+    overflow:hidden;
+    background:#fff;
+}
+
+.fell-for-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s var(--ease);
+}
+
+.fell-for-card:hover .fell-for-image img{
+    transform:scale(1.06);
+}
+
+/* Wishlist */
+.fell-for-wishlist{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    color:var(--heading);
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    cursor:pointer;
+    transition:transform .25s ease;
+    border:none;
+    z-index:2;
+}
+
+.fell-for-wishlist:hover{
+    transform:scale(1.12);
+}
+
+/* Product information */
+.fell-for-info{
+    padding:18px 18px 20px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.fell-for-category{
+    font-size:10.5px;
+    color:var(--muted);
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:6px;
+}
+
+.fell-for-name{
+    font-size:14.5px;
+    font-weight:500;
+    color:var(--heading);
+    margin-bottom:6px;
+    line-height:1.4;
+    font-family:var(--font-head);
+}
+
+.fell-for-price{
+    font-size:16px;
+    font-weight:600;
+    color:var(--heading);
+    margin-bottom:14px;
+}
+
+.fell-for-price .old{
+    font-size:12.5px;
+    color:var(--muted);
+    text-decoration:line-through;
+    font-weight:400;
+    margin-left:8px;
+}
+
+/* Add to cart */
+.fell-for-buttons{
+    margin-top:auto;
+}
+
+.fell-for-buttons .cart{
+    width:100%;
+    background:var(--cta);
+    color:#fff;
+    border:none;
+    padding:11px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:background .25s ease;
+}
+
+.fell-for-buttons .cart:hover{
+    background:var(--cta-hover);
+}
+
+/* Tablet */
+@media(max-width:1100px){
+    .fell-for-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media(max-width:760px){
+
+    .fell-for-section{
+        padding:50px 0;
+    }
+
+    .fell-for-section .section-head{
+        margin-bottom:30px;
+        padding:0 16px;
+    }
+
+    .fell-for-section .section-head h2{
+        font-size:30px;
+    }
+
+    .fell-for-section .section-head p{
+        font-size:13px;
+        margin-top:10px;
+    }
+
+    .fell-for-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        padding:0 16px;
+    }
+
+    .fell-for-info{
+        padding:14px 12px 15px;
+    }
+
+    .fell-for-category{
+        font-size:9px;
+        margin-bottom:5px;
+    }
+
+    .fell-for-name{
+        font-size:13px;
+        line-height:1.35;
+    }
+
+    .fell-for-price{
+        font-size:14px;
+        margin-bottom:10px;
+    }
+
+    .fell-for-price .old{
+        font-size:11px;
+        margin-left:5px;
+    }
+
+    .fell-for-buttons .cart{
+        padding:9px 6px;
+        font-size:10px;
+    }
+
+    .fell-for-wishlist{
+        width:31px;
+        height:31px;
+        font-size:15px;
+        top:9px;
+        right:9px;
+    }
+}
+  /* =========================================================
+   RUHMERAH ANTI-TARNISH FAQ
+   ========================================================= */
+
+.ruhmerah-faq-section {
+  width: 100%;
+  background: #fff6e8;
+  padding: 90px 20px;
+  box-sizing: border-box;
+}
+
+.ruhmerah-faq-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.ruhmerah-faq-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.ruhmerah-faq-eyebrow {
+  margin: 0 0 12px;
+  color: #c89a4a;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.ruhmerah-faq-heading h2 {
+  margin: 0;
+  color: #762820;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.ruhmerah-faq-intro {
+  max-width: 650px;
+  margin: 15px auto 0;
+  color: #5f514b;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* FAQ LIST */
+
+.ruhmerah-faq-list {
+  width: 100%;
+}
+
+
+/* Individual FAQ */
+
+.ruhmerah-faq-item {
+  width: 100%;
+  margin-bottom: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(118, 40, 32, 0.12);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.ruhmerah-faq-item:hover {
+  border-color: rgba(200, 154, 74, 0.55);
+}
+
+
+/* QUESTION */
+
+.ruhmerah-faq-item summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 22px 55px 22px 25px;
+
+  color: #762820;
+  background: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  cursor: pointer;
+  list-style: none;
+
+  box-sizing: border-box;
+}
+
+
+/* Remove default browser arrow */
+
+.ruhmerah-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.ruhmerah-faq-item summary::marker {
+  display: none;
+}
+
+
+/* Custom + icon */
+
+.ruhmerah-faq-item summary::after {
+  content: "+";
+
+  position: absolute;
+  right: 23px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #c89a4a;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* When opened */
+
+.ruhmerah-faq-item[open] {
+  border-color: rgba(200, 154, 74, 0.55);
+  box-shadow: 0 8px 25px rgba(118, 40, 32, 0.06);
+}
+
+.ruhmerah-faq-item[open] summary {
+  color: #762820;
+}
+
+.ruhmerah-faq-item[open] summary::after {
+  content: "−";
+  transform: translateY(-50%);
+}
+
+
+/* ANSWER */
+
+.ruhmerah-faq-answer {
+  padding: 0 25px 24px;
+  background: #ffffff;
+}
+
+.ruhmerah-faq-answer p {
+  margin: 0 0 12px;
+
+  color: #5c514c;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.ruhmerah-faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.ruhmerah-faq-answer strong {
+  color: #762820;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .ruhmerah-faq-section {
+    padding: 65px 15px;
+  }
+
+  .ruhmerah-faq-heading {
+    margin-bottom: 32px;
+  }
+
+  .ruhmerah-faq-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .ruhmerah-faq-heading h2 {
+    font-size: 31px;
+  }
+
+  .ruhmerah-faq-intro {
+    font-size: 13px;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  .ruhmerah-faq-item {
+    margin-bottom: 9px;
+  }
+
+  .ruhmerah-faq-item summary {
+    padding: 18px 48px 18px 18px;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .ruhmerah-faq-item summary::after {
+    right: 17px;
+    font-size: 22px;
+  }
+
+  .ruhmerah-faq-answer {
+    padding: 0 18px 20px;
+  }
+
+  .ruhmerah-faq-answer p {
+    font-size: 12.5px;
+    line-height: 1.8;
+  }
+}
+
+
+/* Smaller phones */
+
+@media (max-width: 400px) {
+
+  .ruhmerah-faq-section {
+    padding: 55px 12px;
+  }
+
+  .ruhmerah-faq-heading h2 {
+    font-size: 28px;
+  }
+
+  .ruhmerah-faq-item summary {
+    font-size: 13px;
+  }
+
+  .ruhmerah-faq-answer p {
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Cookie Consent -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to make your RUHMERAH experience warmer. By continuing, you agree to our cookie policy.</p>
+  <button class="btn btn-primary" id="cookieAccept">Accept</button>
+</div>
+
+
+<!-- Header -->
+<header class="site-header transparent-mode" id="siteHeader">
+  <div class="header-inner">
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <a href="index.html">
+      <img src="ruhmerahlogo1.png" alt="RUHMERAH Logo" class="logo">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="underline-hover">Home</a>
+      <div class="mega-wrap" id="shopMegaWrap">
+    <a href="#" class="underline-hover" id="navbarShop">Shop</a>
+
+    <div class="mega-menu">
+        <div class="mega-col">
+            <h4>Collections</h4>
+            <a href="rings.html">Rings</a>
+            <a href="bracelets.html">Bracelets</a>
+            <a href="necklaces.html">Necklaces</a>
+            <a href="earrings.html">Earrings</a>
+        </div>
+    </div>
+</div>
+      <a href="newarrivals.html" class="underline-hover">New Arrivals</a>
+      <a href="bestseller.html" class="underline-hover">Best Sellers</a>
+      <a href="giftcollection.html" class="underline-hover">Gift Collection</a>
+      <a href="about.html" class="underline-hover">About</a>
+      <a href="blogs.html" class="underline-hover">Blogs</a>
+    </nav>
+    <div class="nav-icons">
+<a href="wishlist.html" class="wishlist-link">
+<button class="icon-btn" id="wishlistTop" aria-label="Wishlist">
+<svg viewBox="0 0 24 24">
+<path d="M12 21s-7.5-4.6-10-9.2C.4 8.1 2 4 6 4c2.2 0 3.7 1.3 6 3.6C14.3 5.3 15.8 4 18 4c4 0 5.6 4.1 4 7.8-2.5 4.6-10 9.2-10 9.2z"/>
+</svg>
+</button>
+</a>  <a href="account.html" class="icon-link">
+    <button class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c1.5-4.5 5-6.5 8-6.5s6.5 2 8 6.5"/>
+        </svg>
+    </button>
+</a>
+      <a href="cart.html" class="icon-link">
+    <button class="icon-btn" id="cartOpen" aria-label="Cart">
+        <svg viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1.4"/>
+            <circle cx="18" cy="21" r="1.4"/>
+            <path d="M2 3h2l2.6 12.6a2 2 0 0 0 2-1.6h8.4a2 2 0 0 0 2-1.6L21 7H6"/>
+        </svg>
+    </button>
+</a>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" aria-label="Close menu" onclick="toggleMenu()">✕</button>
+  <a href="index.html">Home</a>
+  <div class="mobile-menu-heading">Shop</div>
+  <div id="shopSubmenu" class="mobile-submenu open">
+    <a href="rings.html">Rings</a>
+    <a href="bracelets.html">Bracelets</a>
+    <a href="necklaces.html">Necklaces</a>
+    <a href="earrings.html">Earrings</a>
+  </div>
+  <a href="newarrivals.html">New Arrivals</a>
+  <a href="bestseller.html">Best Sellers</a>
+  <a href="giftcollection.html">Gift Collection</a>
+  <a href="about.html">About</a>
+  <a href="blogs.html">Blogs</a>
+</div>
+
+<!-- Search Panel -->
+<div class="search-panel" id="searchPanel">
+  <div class="search-box">
+    <div class="search-close" id="searchClose">✕</div>
+    <div class="search-input-wrap">
+      <input type="text" id="searchInput" placeholder="Search Earrings">
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" id="heroSlider">
+    <div class="hero-slide active" data-idx="0">
+    <div class="hero-bg">
+  <video id="heroVideo" autoplay muted loop playsinline>
+    <source src="heroo.mp4" type="video/mp4">
+  </video>
+</div>
+      <div class="hero-overlay"></div>
+      <div class="wrap">
+        <div class="hero-content">
+          <span class="eyebrow">The Everyday Edit</span>
+          <h1>Warmth,<br>worn daily.</h1>
+          <p>Waterproof, anti-tarnish jewelry made for the moments that matter — and the ones in between.</p>
+<a href="#" class="btn btn-ghost-light" id="heroShopBtn">Shop</a>        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-idx="1">
+      <div class="hero-bg" style="background:linear-gradient(120deg,#C89A4A,#7C2E27);"></div>
+      <div class="hero-overlay"></div>
+      <div class="wrap">
+        <div class="hero-content">
+          <span class="eyebrow">New Arrivals</span>
+          <h1>Heirlooms,<br>reimagined.</h1>
+          <p>A new season of handcrafted pieces designed to be passed down, not put away.</p>
+          <a href="#newarrivals" class="btn btn-ghost-light">Explore Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-idx="2">
+      <div class="hero-bg" style="background:linear-gradient(120deg,#5E1F24,#C89A4A);"></div>
+      <div class="hero-overlay"></div>
+      <div class="wrap">
+        <div class="hero-content">
+          <span class="eyebrow">Gift Collection</span>
+          <h1>Give<br>something golden.</h1>
+          <p>Thoughtfully packaged, personally engraved — gifting made effortless and elegant.</p>
+          <a href="#collections" class="btn btn-ghost-light">View Collection</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-idx="3">
+      <div class="hero-bg" style="background:linear-gradient(120deg,#3F1512,#C89A4A);"></div>
+      <div class="hero-overlay"></div>
+      <div class="wrap">
+        <div class="hero-content">
+          <span class="eyebrow">Personalized Jewelry</span>
+          <h1>Made to<br>carry your name.</h1>
+          <p>Initials, birthstones and dates — designed with you, finished by us.</p>
+          <a href="#personalized" class="btn btn-ghost-light">Design Yours</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="hero-nav" id="heroDots"></div>
+  </section>
+
+  <!-- =========================================================
+     THE ONE YOU JUST FELL FOR...
+     Instagram Ad Products
+     ========================================================= -->
+
+<section class="fell-for-section" id="fellForSection">
+
+    <div class="wrap">
+
+        <div class="section-head">
+
+            <span class="eyebrow">Seen on Instagram</span>
+
+            <h2>The one you just fell for...</h2>
+
+            <p>
+                Couldn't stop thinking about it?
+                Here's the piece you came for.
+            </p>
+
+        </div>
+
+
+        <div class="fell-for-grid">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="fell-for-card">
+
+                <div class="fell-for-image">
+
+                    <a href="PRODUCT-1.html">
+
+                        <img
+                            src="PRODUCT-1.jpeg"
+                            alt="PRODUCT 1"
+                        >
+
+                    </a>
+
+                    <button
+                        class="fell-for-wishlist"
+                        onclick="addWishlist(
+                            'PRODUCT-1.jpeg',
+                            'PRODUCT 1',
+                            350
+                        )"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="fell-for-info">
+
+                    <div class="fell-for-category">
+                        New Arrival
+                    </div>
+
+                    <div class="fell-for-name">
+                        PRODUCT 1
+                    </div>
+
+                    <div class="fell-for-price">
+                        ₹350
+                        <span class="old">₹550</span>
+                    </div>
+
+                    <div class="fell-for-buttons">
+
+                        <button
+                            class="cart"
+                            onclick="addToCart(
+                                'PRODUCT-1',
+                                'PRODUCT 1',
+                                350,
+                                'PRODUCT-1.jpeg'
+                            )"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 2 -->
+            <div class="fell-for-card">
+
+                <div class="fell-for-image">
+
+                    <a href="PRODUCT-2.html">
+
+                        <img
+                            src="PRODUCT-2.jpeg"
+                            alt="PRODUCT 2"
+                        >
+
+                    </a>
+
+                    <button
+                        class="fell-for-wishlist"
+                        onclick="addWishlist(
+                            'PRODUCT-2.jpeg',
+                            'PRODUCT 2',
+                            290
+                        )"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="fell-for-info">
+
+                    <div class="fell-for-category">
+                        New Arrival
+                    </div>
+
+                    <div class="fell-for-name">
+                        PRODUCT 2
+                    </div>
+
+                    <div class="fell-for-price">
+                        ₹290
+                        <span class="old">₹390</span>
+                    </div>
+
+                    <div class="fell-for-buttons">
+
+                        <button
+                            class="cart"
+                            onclick="addToCart(
+                                'PRODUCT-2',
+                                'PRODUCT 2',
+                                290,
+                                'PRODUCT-2.jpeg'
+                            )"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 3 -->
+            <div class="fell-for-card">
+
+                <div class="fell-for-image">
+
+                    <a href="PRODUCT-3.html">
+
+                        <img
+                            src="PRODUCT-3.jpeg"
+                            alt="PRODUCT 3"
+                        >
+
+                    </a>
+
+                    <button
+                        class="fell-for-wishlist"
+                        onclick="addWishlist(
+                            'PRODUCT-3.jpeg',
+                            'PRODUCT 3',
+                            249
+                        )"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="fell-for-info">
+
+                    <div class="fell-for-category">
+                        Best Seller
+                    </div>
+
+                    <div class="fell-for-name">
+                        PRODUCT 3
+                    </div>
+
+                    <div class="fell-for-price">
+                        ₹249
+                        <span class="old">₹399</span>
+                    </div>
+
+                    <div class="fell-for-buttons">
+
+                        <button
+                            class="cart"
+                            onclick="addToCart(
+                                'PRODUCT-3',
+                                'PRODUCT 3',
+                                249,
+                                'PRODUCT-3.jpeg'
+                            )"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT 4 -->
+            <div class="fell-for-card">
+
+                <div class="fell-for-image">
+
+                    <a href="PRODUCT-4.html">
+
+                        <img
+                            src="PRODUCT-4.jpeg"
+                            alt="PRODUCT 4"
+                        >
+
+                    </a>
+
+                    <button
+                        class="fell-for-wishlist"
+                        onclick="addWishlist(
+                            'PRODUCT-4.jpeg',
+                            'PRODUCT 4',
+                            320
+                        )"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="fell-for-info">
+
+                    <div class="fell-for-category">
+                        Trending
+                    </div>
+
+                    <div class="fell-for-name">
+                        PRODUCT 4
+                    </div>
+
+                    <div class="fell-for-price">
+                        ₹320
+                        <span class="old">₹450</span>
+                    </div>
+
+                    <div class="fell-for-buttons">
+
+                        <button
+                            class="cart"
+                            onclick="addToCart(
+                                'PRODUCT-4',
+                                'PRODUCT 4',
+                                320,
+                                'PRODUCT-4.jpeg'
+                            )"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- Trust Bar -->
+  <section>
+  <section class="trust-bar">
+    <div class="wrap trust-bar-wrap">
+      <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2C8 7 5 10.5 5 14.5a7 7 0 0 0 14 0C19 10.5 16 7 12 2z"/></svg>Waterproof</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>Anti Tarnish</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9-9C1.5 8.5 3 5 6.5 5c2 0 3.5 1.3 5.5 3.7C14 6.3 15.5 5 17.5 5 21 5 22.5 8.5 21 12c-2 4.6-9 9-9 9z"/></svg>Hypoallergenic</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M3 12l7-9v6h11l-7 9v-6H3z"/></svg>Nickel Free</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></svg>Free Shipping ₹1499+</div>
+    </div>
+
+  <section class="happy-customers">
+    <div class="counter-box">
+        <h1><span id="orderCount">0</span>+</h1>
+        <p>Happy Customers</p>
+    </div>
+</section>
+  </section>
+
+  <!-- Collections -->
+<section id="collections">
+<div class="wrap">
+
+  <div class="section-head">
+    <span class="eyebrow">Shop by Edit</span>
+    <h2>Shop by Category</h2>
+    <p>Find the edit that fits your everyday, from the pool to the party.</p>
+  </div>
+
+  <div class="collections-container">
+
+    <!-- Left Side -->
+    <div class="collections-side">
+
+      <div class="collection-card" style="background-image:url('image.png');">
+        <div class="cc-content">
+          <span class="eyebrow">Made to Last</span>
+          <h3>Earrings Collection</h3>
+          <a href="earrings.html">Shop Now →</a>
+        </div>
+      </div>
+
+      <div class="collection-card" style="background-image:url('necklace image.png');">
+        <div class="cc-content">
+          <span class="eyebrow">Wrapped With Warmth</span>
+          <h3>Necklace Collection</h3>
+          <a href="necklaces.html">Shop Gifts →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="collections-side">
+
+      <div class="collection-card" style="background-image:url('bracelet image .png');">
+        <div class="cc-content">
+          <span class="eyebrow">Everyday Luxury</span>
+          <h3>Bracelet Collection</h3>
+          <a href="bracelets.html">Shop Now →</a>
+        </div>
+      </div>
+
+      <div class="collection-card" style="background-image:url('ring.png');">
+        <div class="cc-content">
+          <span class="eyebrow">New Arrivals</span>
+          <h3>Ring Collection</h3>
+          <a href="rings.html">Explore →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+
+  <!-- New Arrivals -->
+<section id="newarrivals" style="background:var(--card);">
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="eyebrow">Just Landed</span>
+      <h2>New Arrivals</h2>
+      <p>Fresh from the studio — this season's newest silhouettes.</p>
+    </div>
+
+    <!-- Category filter tabs -->
+    <div class="tab-row" id="arrivalsTabs">
+      <button class="tab-btn active" data-category="earrings" type="button">Earrings</button>
+      <button class="tab-btn" data-category="rings" type="button">Rings</button>
+      <button class="tab-btn" data-category="necklace" type="button">Necklace</button>
+      <button class="tab-btn" data-category="bracelet" type="button">Bracelet</button>
+    </div>
+
+    <div class="arrivals-carousel">
+
+      <div class="arrivals-track" id="arrivalsTrack">
+
+        <!-- ===== EARRINGS ===== -->
+        <!-- Replace image src with real product photos — filenames below are placeholders -->
+
+        <div class="card" data-category="earrings">
+          <div class="image-box">
+            <a href="sundari-gold-hoops.html">
+              <img src="newarrival-earring-1.jpg" alt="Sundari Gold Hoops">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-earring-1.jpg','Sundari Gold Hoops',2499)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Gold</div>
+            <div class="name">Sundari Gold Hoops</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹2,499 <span class="old">₹3,199</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Sundari Gold Hoops" data-price="2499" data-image="newarrival-earring-1.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="earrings">
+          <div class="image-box">
+            <a href="pearl-drop-studs.html">
+              <img src="newarrival-earring-2.jpg" alt="Pearl Drop Studs">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-earring-2.jpg','Pearl Drop Studs',1299)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Pearl</div>
+            <div class="name">Pearl Drop Studs</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,299 <span class="old">₹1,699</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Pearl Drop Studs" data-price="1299" data-image="newarrival-earring-2.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="earrings">
+          <div class="image-box">
+            <a href="crystal-chandelier-earrings.html">
+              <img src="newarrival-earring-3.jpg" alt="Crystal Chandelier Earrings">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-earring-3.jpg','Crystal Chandelier Earrings',1899)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Crystal</div>
+            <div class="name">Crystal Chandelier Earrings</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,899 <span class="old">₹2,399</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Crystal Chandelier Earrings" data-price="1899" data-image="newarrival-earring-3.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="earrings">
+          <div class="image-box">
+            <a href="minimal-gold-studs.html">
+              <img src="newarrival-earring-4.jpg" alt="Minimal Gold Studs">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-earring-4.jpg','Minimal Gold Studs',899)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Minimal</div>
+            <div class="name">Minimal Gold Studs</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹899 <span class="old">₹1,199</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Minimal Gold Studs" data-price="899" data-image="newarrival-earring-4.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== RINGS ===== -->
+
+        <div class="card" data-category="rings" style="display:none;">
+          <div class="image-box">
+            <a href="stackable-band-ring-set.html">
+              <img src="newarrival-ring-1.jpg" alt="Stackable Band Ring Set">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-ring-1.jpg','Stackable Band Ring Set',1199)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Gold</div>
+            <div class="name">Stackable Band Ring Set</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,199 <span class="old">₹1,599</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Stackable Band Ring Set" data-price="1199" data-image="newarrival-ring-1.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="rings" style="display:none;">
+          <div class="image-box">
+            <a href="crystal-solitaire-ring.html">
+              <img src="newarrival-ring-2.jpg" alt="Crystal Solitaire Ring">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-ring-2.jpg','Crystal Solitaire Ring',1499)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Crystal</div>
+            <div class="name">Crystal Solitaire Ring</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,499 <span class="old">₹1,999</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Crystal Solitaire Ring" data-price="1499" data-image="newarrival-ring-2.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="rings" style="display:none;">
+          <div class="image-box">
+            <a href="twisted-gold-band.html">
+              <img src="newarrival-ring-3.jpg" alt="Twisted Gold Band">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-ring-3.jpg','Twisted Gold Band',999)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Gold</div>
+            <div class="name">Twisted Gold Band</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹999 <span class="old">₹1,299</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Twisted Gold Band" data-price="999" data-image="newarrival-ring-3.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="rings" style="display:none;">
+          <div class="image-box">
+            <a href="pearl-statement-ring.html">
+              <img src="newarrival-ring-4.jpg" alt="Pearl Statement Ring">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-ring-4.jpg','Pearl Statement Ring',1349)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Pearl</div>
+            <div class="name">Pearl Statement Ring</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,349 <span class="old">₹1,799</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Pearl Statement Ring" data-price="1349" data-image="newarrival-ring-4.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== NECKLACE ===== -->
+
+        <div class="card" data-category="necklace" style="display:none;">
+          <div class="image-box">
+            <a href="layered-gold-necklace.html">
+              <img src="newarrival-necklace-1.jpg" alt="Layered Gold Necklace">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-necklace-1.jpg','Layered Gold Necklace',2199)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Gold</div>
+            <div class="name">Layered Gold Necklace</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹2,199 <span class="old">₹2,899</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Layered Gold Necklace" data-price="2199" data-image="newarrival-necklace-1.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="necklace" style="display:none;">
+          <div class="image-box">
+            <a href="pearl-pendant-necklace.html">
+              <img src="newarrival-necklace-2.jpg" alt="Pearl Pendant Necklace">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-necklace-2.jpg','Pearl Pendant Necklace',1799)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Pearl</div>
+            <div class="name">Pearl Pendant Necklace</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,799 <span class="old">₹2,299</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Pearl Pendant Necklace" data-price="1799" data-image="newarrival-necklace-2.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="necklace" style="display:none;">
+          <div class="image-box">
+            <a href="crystal-choker.html">
+              <img src="newarrival-necklace-3.jpg" alt="Crystal Choker">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-necklace-3.jpg','Crystal Choker',1599)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Crystal</div>
+            <div class="name">Crystal Choker</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,599 <span class="old">₹2,099</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Crystal Choker" data-price="1599" data-image="newarrival-necklace-3.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="necklace" style="display:none;">
+          <div class="image-box">
+            <a href="minimal-chain-necklace.html">
+              <img src="newarrival-necklace-4.jpg" alt="Minimal Chain Necklace">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-necklace-4.jpg','Minimal Chain Necklace',1099)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Minimal</div>
+            <div class="name">Minimal Chain Necklace</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,099 <span class="old">₹1,499</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Minimal Chain Necklace" data-price="1099" data-image="newarrival-necklace-4.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== BRACELET ===== -->
+
+        <div class="card" data-category="bracelet" style="display:none;">
+          <div class="image-box">
+            <a href="crystal-roman-numeral-bracelet.html">
+              <img src="newarrival-bracelet-1.jpg" alt="Crystal Roman Numeral Bracelet">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-bracelet-1.jpg','Crystal Roman Numeral Bracelet',350)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Korean</div>
+            <div class="name">Crystal Roman Numeral Bracelet</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹350 <span class="old">₹550</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Crystal Roman Numeral Bracelet" data-price="350" data-image="newarrival-bracelet-1.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="bracelet" style="display:none;">
+          <div class="image-box">
+            <a href="pearl-charm-bracelet.html">
+              <img src="newarrival-bracelet-2.jpg" alt="Pearl Charm Bracelet">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-bracelet-2.jpg','Pearl Charm Bracelet',899)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Pearl</div>
+            <div class="name">Pearl Charm Bracelet</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹899 <span class="old">₹1,199</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Pearl Charm Bracelet" data-price="899" data-image="newarrival-bracelet-2.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="bracelet" style="display:none;">
+          <div class="image-box">
+            <a href="gold-cuff-bracelet.html">
+              <img src="newarrival-bracelet-3.jpg" alt="Gold Cuff Bracelet">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-bracelet-3.jpg','Gold Cuff Bracelet',1299)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Gold</div>
+            <div class="name">Gold Cuff Bracelet</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹1,299 <span class="old">₹1,699</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Gold Cuff Bracelet" data-price="1299" data-image="newarrival-bracelet-3.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="bracelet" style="display:none;">
+          <div class="image-box">
+            <a href="layered-chain-bracelet.html">
+              <img src="newarrival-bracelet-4.jpg" alt="Layered Chain Bracelet">
+            </a>
+            <button class="wishlist" onclick="addWishlist('newarrival-bracelet-4.jpg','Layered Chain Bracelet',999)">♡</button>
+          </div>
+          <div class="info">
+            <div class="category">Gold</div>
+            <div class="name">Layered Chain Bracelet</div>
+            <div class="rating">★★★★★</div>
+            <div class="price">₹999 <span class="old">₹1,349</span></div>
+            <div class="buttons">
+              <button class="cart add-cart" data-name="Layered Chain Bracelet" data-price="999" data-image="newarrival-bracelet-4.jpg">Add Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="arrivals-controls">
+        <button class="arrivals-arrow" id="arrivalsPrev" aria-label="Previous product">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="arrivals-dots" id="arrivalsDots"></div>
+
+        <button class="arrivals-arrow" id="arrivalsNext" aria-label="Next product">
+          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Shop by Mood (was: Best Sellers) -->
+<section id="shop-by-mood">
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="eyebrow">SHOP BY MOOD</span>
+      <h2>Find Your Jewellery Moment</h2>
+      <p>From sunny beach days to special evenings, discover pieces made for every moment.</p>
+    </div>
+
+    <div class="collections-container">
+
+      <!-- Left Side -->
+      <div class="collections-side">
+
+        <div class="collection-card" style="background-image:url('BEACH AESTHETICS.jpg');">
+          <div class="cc-content">
+            <span class="eyebrow">Made for Sunshine</span>
+            <h3>Beach Day</h3>
+            <a href="beachcollection.html">Shop Beach Edit →</a>
+          </div>
+        </div>
+
+        <div class="collection-card" style="background-image:url('everyday wear.jpg');">
+          <div class="cc-content">
+            <span class="eyebrow">Your Daily Essentials</span>
+            <h3>Everyday Wear</h3>
+            <a href="everydaywearcollection.html">Shop Everyday →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Side -->
+      <div class="collections-side">
+
+        <div class="collection-card" style="background-image:url('DATE NIGHT.jpg');">
+          <div class="cc-content">
+            <span class="eyebrow">Made to Be Noticed</span>
+            <h3>Date Night</h3>
+            <a href="datenightcollection.html">Shop Date Night →</a>
+          </div>
+        </div>
+
+       <div class="collection-card" style="background-image:url('gift.jpg');">
+          <div class="cc-content">
+            <span class="eyebrow">Wrapped With Warmth</span>
+            <h3>Gifting Edit</h3>
+            <a href="giftcollection.html">Shop Gifts →</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- Testimonials -->
+  <section id="testimonialsSection" style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Kind Words</span>
+        <h2>Loved by Our Community</h2>
+        <p>Swipe through what our customers are saying.</p>
+      </div>
+
+      <div class="testi-carousel">
+
+        <div class="testi-track" id="testiTrack">
+
+          <!-- Slide 1 -->
+          <!-- To add a real photo: <div class="testi-product-photo"><img src="customer-1.jpg" alt="Product"></div> in place of the quote-mark div below -->
+          <div class="testi-card seed">
+            <div class="testi-quote-mark">"</div>
+            <div class="stars">★★★★★</div>
+            <p>The pieces feel so much more premium than the price suggests. I've worn my earrings in the pool and the shower for months — zero tarnish.</p>
+            <div class="testi-who">
+              <b>Ananya R.</b>
+              <span>Chennai</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testi-card seed">
+            <div class="testi-quote-mark">"</div>
+            <div class="stars">★★★★★</div>
+            <p>Ordered the gift edit for my mom's birthday — the packaging alone made it feel special. She hasn't taken the necklace off since.</p>
+            <div class="testi-who">
+              <b>Karthik M.</b>
+              <span>Bengaluru</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testi-card seed">
+            <div class="testi-quote-mark">"</div>
+            <div class="stars">★★★★★</div>
+            <p>I have sensitive skin and react to almost everything. Finally found a brand that's actually hypoallergenic — no irritation at all.</p>
+            <div class="testi-who">
+              <b>Priya S.</b>
+              <span>Hyderabad</span>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="testi-card seed">
+            <div class="testi-quote-mark">"</div>
+            <div class="stars">★★★★★</div>
+            <p>The personalized ring came out beautifully — the engraving is so clean. Shipping was quick and customer support actually replies!</p>
+            <div class="testi-who">
+              <b>Rohan D.</b>
+              <span>Mumbai</span>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="testi-card seed">
+            <div class="testi-quote-mark">"</div>
+            <div class="stars">★★★★★</div>
+            <p>Bought the beach day set for a Goa trip — wore it swimming every day and it still looks brand new. Genuinely waterproof.</p>
+            <div class="testi-who">
+              <b>Meera K.</b>
+              <span>Pune</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testi-controls">
+          <button class="testi-arrow" id="testiPrev" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="testi-dots" id="testiDots"></div>
+
+          <button class="testi-arrow" id="testiNext" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Write a Review -->
+      <div class="review-form-wrap">
+        <button class="review-toggle-btn" id="reviewToggleBtn" type="button">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Share Your Experience
+        </button>
+
+        <form class="review-form" id="reviewForm">
+
+          <h3>Write a Review</h3>
+          <p class="review-form-note">Your review will be checked before it appears publicly.</p>
+
+          <div class="review-field">
+            <label for="reviewName">Your Name</label>
+            <input type="text" id="reviewName" placeholder="Enter your name" required maxlength="60">
+          </div>
+
+          <div class="review-field">
+            <label>Your Rating</label>
+            <div class="review-stars-input" id="reviewStarsInput">
+              <button type="button" class="review-star" data-value="1" aria-label="1 star">★</button>
+              <button type="button" class="review-star" data-value="2" aria-label="2 stars">★</button>
+              <button type="button" class="review-star" data-value="3" aria-label="3 stars">★</button>
+              <button type="button" class="review-star" data-value="4" aria-label="4 stars">★</button>
+              <button type="button" class="review-star" data-value="5" aria-label="5 stars">★</button>
+            </div>
+            <input type="hidden" id="reviewRating" value="5">
+          </div>
+
+          <div class="review-field">
+            <label for="reviewMessage">Your Review</label>
+            <textarea id="reviewMessage" placeholder="Tell us about your experience..." required maxlength="600"></textarea>
+          </div>
+
+          <div class="review-field">
+            <label for="reviewPhoto">Share a Photo of the Product (optional)</label>
+            <input type="file" id="reviewPhoto" accept="image/*">
+            <img id="reviewPhotoPreview" class="review-photo-preview" alt="Preview">
+          </div>
+
+          <div class="review-message" id="reviewFormMessage"></div>
+
+          <button type="submit" class="btn btn-primary review-submit-btn" id="reviewSubmitBtn">
+            Submit Review
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Social Channels -->
+  <section id="socialSection">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Stay Connected</span>
+        <h2>Follow the Warmth</h2>
+        <p>We're on Instagram, Facebook and WhatsApp — come say hello.</p>
+      </div>
+      <div class="social-grid">
+
+        <a
+          class="social-card ig"
+          href="https://www.instagram.com/ruhmerah?igsh=MTc5bDZ1cWQzcWNjaw%3D%3D&igsi=MTc5bDZ1cWQzcWNjaw%3D%3D&utm_source=qr"
+          target="_blank"
+          rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+          </div>
+          <h3>Instagram</h3>
+          <p>New drops, styling ideas and behind-the-scenes @ruhmerah.</p>
+          <span class="social-link">Follow Us</span>
+        </a>
+
+        <a
+          class="social-card fb"
+          href="https://www.facebook.com/share/1JoUnVPB9T/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 8h-2a2 2 0 0 0-2 2v10"/>
+              <path d="M8 12h6"/>
+            </svg>
+          </div>
+          <h3>Facebook</h3>
+          <p>Offers, updates and community stories from RUHMERAH.</p>
+          <span class="social-link">Like Our Page</span>
+        </a>
+
+        <a
+          class="social-card wa"
+          href="https://wa.me/917358252151"
+          target="_blank"
+          rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/>
+              <path d="M8.5 8.7c.2-.6.9-.5 1.3-.2.3.3.7 1.5 1 2 .2.4 0 .8-.3 1.1-.6.7.6 1.9 1.2 2.4.7.6 1.6.9 2.1.3.3-.3.7-.5 1.1-.3.5.3 1.6.8 1.9 1.1.3.3.3.9-.1 1.3-1.6 1.6-4.6.2-6.7-1.9-2.1-2.1-3.5-5-2-6.7z" fill="#fff" stroke="none"/>
+            </svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>Have a question about an order or a piece? Chat with us directly.</p>
+          <span class="social-link">Chat With Us</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blogSection" style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The Journal</span>
+        <h2>From Our Studio</h2>
+        <p>Styling tips, care guides and everything jewellery.</p>
+      </div>
+
+      <div class="blog-carousel">
+
+        <div class="blog-track" id="blogTrack">
+
+          <a href="blog1.html" class="blog-card">
+            <div class="blog-media">
+              <img src="blog1thumb.jpg" alt="What Exactly Is Anti Tarnish Jewellery?">
+              <span class="blog-category-tag">Jewellery Care</span>
+            </div>
+            <div class="blog-body">
+              <h3>What Exactly Is Anti Tarnish Jewellery?</h3>
+              <p>Everything you need to know about anti-tarnish jewellery, how it works, how long it lasts and how to care for it.</p>
+              <span class="blog-read">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="blog2.html" class="blog-card">
+            <div class="blog-media">
+              <img src="blog2.2.jpg" alt="Popular Jewellery Brands in India (2026)">
+              <span class="blog-category-tag">Jewellery</span>
+            </div>
+            <div class="blog-body">
+              <h3>Popular Jewellery Brands in India (2026)</h3>
+              <p>Explore popular jewellery brands and styles shaping the Indian market.</p>
+              <span class="blog-read">Read More →</span>
+            </div>
+          </a>
+
+          <a href="blog3.html" class="blog-card">
+            <div class="blog-media">
+              <img src="blog3.jpg" alt="Trending Jewellery in 2026">
+              <span class="blog-category-tag">Trends</span>
+            </div>
+            <div class="blog-body">
+              <h3>Trending Jewellery in 2026</h3>
+              <p>Discover the biggest jewellery trends every woman will love this year.</p>
+              <span class="blog-read">Read More →</span>
+            </div>
+          </a>
+
+          <a href="blog4.html" class="blog-card">
+            <div class="blog-media">
+              <img src="blog4.jpg" alt="Buying Jewellery Online in India">
+              <span class="blog-category-tag">Shopping</span>
+            </div>
+            <div class="blog-body">
+              <h3>Buying Jewellery Online in India</h3>
+              <p>Everything you need to know before choosing everyday fashion jewellery.</p>
+              <span class="blog-read">Read More →</span>
+            </div>
+          </a>
+
+          <a href="blog5.html" class="blog-card">
+            <div class="blog-media">
+              <img src="blog5.2.jpg" alt="Jewellery Styling Guide">
+              <span class="blog-category-tag">Styling</span>
+            </div>
+            <div class="blog-body">
+              <h3>Jewellery Styling Guide</h3>
+              <p>Simple ways to style your favourite jewellery for everyday looks.</p>
+              <span class="blog-read">Read More →</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="blog-controls">
+          <button class="blog-arrow" id="blogPrev" aria-label="Previous article">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="blog-dots" id="blogDots"></div>
+
+          <button class="blog-arrow" id="blogNext" aria-label="Next article">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+ <!-- Newsletter -->
+<section class="newsletter-section">
+    <div class="wrap">
+
+        <span class="eyebrow" style="color:var(--gold);">
+            Stay Golden
+        </span>
+
+        <h2>Get 10% off your first order.</h2>
+
+        <p>
+            Join our list for early access to new drops
+            and members-only gifting edits.
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm">
+
+            <input
+                type="email"
+                id="subscriberEmail"
+                placeholder="Your email address"
+                required
+            >
+
+            <input
+                type="tel"
+                id="subscriberPhone"
+                placeholder="Your phone number"
+                required
+            >
+
+            <button
+                type="submit"
+                class="btn btn-ghost-light">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- RUHMERAH ANTI-TARNISH FAQs -->
+<section class="ruhmerah-faq-section">
+
+  <div class="ruhmerah-faq-container">
+
+    <div class="ruhmerah-faq-heading">
+      <p class="ruhmerah-faq-eyebrow">CARE &amp; DETAILS</p>
+      <h2>RUHMERAH Anti-Tarnish FAQs</h2>
+      <p class="ruhmerah-faq-intro">
+        Everything you need to know about caring for and enjoying your
+        RUHMERAH jewellery.
+      </p>
+    </div>
+
+    <div class="ruhmerah-faq-list">
+
+      <details class="ruhmerah-faq-item">
+        <summary>Will RUHMERAH jewellery last forever?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            No jewellery can remain unchanged forever, but our anti-tarnish
+            jewellery is designed for long-lasting wear. With everyday use,
+            it can generally last around <strong>4–8 months</strong>,
+            depending on usage and exposure to sweat, water, perfumes and
+            chemicals. With occasional wear and proper care, it can last
+            <strong>2 years or even longer</strong>.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>What does “anti-tarnish” actually mean?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Anti-tarnish jewellery has a protective coating that helps slow
+            down tarnishing and preserves the jewellery’s shine and finish
+            for longer. However, it is not completely immune to wear,
+            moisture or chemicals.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>I want to wear my jewellery every day. Is that okay?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Absolutely. RUHMERAH pieces are made to be enjoyed as part of
+            your everyday style. Just remember that daily wear means more
+            exposure to sweat, moisture and friction, which can naturally
+            affect the finish over time.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>Does wearing it occasionally make it last longer?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Yes. Jewellery that is worn occasionally and stored properly
+            experiences much less exposure to sweat, moisture and everyday
+            friction. With good care, your piece can last
+            <strong>2 years or even longer</strong>.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>Is anti-tarnish jewellery waterproof?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Anti-tarnish does not mean completely waterproof. We recommend
+            avoiding prolonged exposure to water, especially during bathing,
+            swimming or water-based activities, as repeated exposure can
+            gradually affect the protective finish.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>What should I avoid while wearing RUHMERAH jewellery?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Try to keep your jewellery away from
+            <strong>perfumes, lotions, chemicals, excessive sweat,
+            chlorine and prolonged moisture</strong>. These can gradually
+            affect the coating and shine.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>Should I put on perfume before or after my jewellery?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Always <strong>perfume first, jewellery last</strong>. Allow
+            perfumes, lotions and other beauty products to dry before
+            putting on your jewellery. This simple habit can help extend
+            the life of the finish.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>What if my jewellery accidentally gets wet?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Don’t worry. Simply wipe it gently with a soft, dry cloth and
+            allow it to dry completely before storing it. Occasional
+            accidental contact with water is very different from repeated
+            or prolonged exposure.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>How should I store my RUHMERAH jewellery?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Store your jewellery in a
+            <strong>clean, dry and preferably airtight pouch or jewellery
+            box</strong>, away from moisture and direct sunlight. Keeping
+            pieces separated also helps prevent scratches and tangling.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>How do I keep the shine looking new for longer?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            A little care goes a long way. After wearing your jewellery,
+            gently wipe it with a soft, dry cloth and store it away from
+            moisture. Avoid abrasive cleaners, polishing liquids and harsh
+            chemicals.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>Why can anti-tarnish jewellery change colour over time?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            The anti-tarnish coating helps protect the jewellery, but it
+            naturally experiences wear with use. Frequent contact with
+            sweat, water, perfumes, chemicals and friction can gradually
+            affect the finish. The lifespan therefore varies from person
+            to person.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>How long can I expect my RUHMERAH jewellery to last?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            There is no fixed lifespan because it depends on how often you
+            wear it and how you care for it. As a general guide,
+            <strong>daily wear may last around 4–8 months</strong>, while
+            jewellery worn occasionally and cared for properly can last
+            <strong>2 years or longer</strong>.
+          </p>
+        </div>
+      </details>
+
+      <details class="ruhmerah-faq-item">
+        <summary>What is the difference between 316L and 304L stainless steel?</summary>
+        <div class="ruhmerah-faq-answer">
+          <p>
+            Both 316L and 304L are grades of stainless steel commonly used
+            in jewellery and are known for their durability and corrosion
+            resistance. The main difference is their composition:
+            <strong>316L contains molybdenum</strong>, which gives it
+            greater resistance to corrosion, particularly in harsher or
+            more humid environments.
+          </p>
+
+          <p>
+            304L is also durable and corrosion-resistant and is widely used
+            for jewellery and everyday products. At RUHMERAH, some pieces
+            may be made using 316L and others using 304L, depending on the
+            design and product specifications.
+          </p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+</main>
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">RUHMERAH</div>
+        <p>Handcrafted, waterproof and anti-tarnish jewelry designed with warmth — for everyday luxury that lasts.</p>
+
+<p class="footer-contact">
+  Contact: <a href="tel:+917358252151">+91 7358252151</a>
+</p>
+
+<div class="footer-socials">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/ruhmerah?igsh=MTc5bDZ1cWQzcWNjaw%3D%3D&igsi=MTc5bDZ1cWQzcWNjaw%3D%3D&utm_source=qr"
+     target="_blank"
+     rel="noopener"
+     aria-label="Instagram">
+
+    <svg viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1"/>
+    </svg>
+
+  </a>
+
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/share/1JoUnVPB9T/?mibextid=wwXIfr"
+     target="_blank"
+     rel="noopener"
+     aria-label="Facebook">
+
+    <svg viewBox="0 0 24 24">
+      <path d="M15 8h-2a2 2 0 0 0-2 2v10"/>
+      <path d="M8 12h6"/>
+    </svg>
+
+  </a>
+
+
+  <!-- Website / Link -->
+  <a href="YOUR_LINK"
+     target="_blank"
+     rel="noopener"
+     aria-label="Website">
+
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M3 12h18"/>
+      <path d="M12 3c3 3 4 6 4 9s-1 6-4 9"/>
+      <path d="M12 3c-3 3-4 6-4 9s1 6 4 9"/>
+    </svg>
+
+  </a>
+
+</div>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <a href="#" onclick="openFooterPopup('customerCarePopup');return false;">Customer Care</a>
+        <a href="#" onclick="openFooterPopup('trackOrderPopup');return false;">Track Order</a>
+        <a href="returns.html">Returns &amp; Exchange</a>
+        <a href="faq.html">FAQs</a>
+        <a href="index.html#socialSection">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <a href="index.html#collections">Waterproof Edit</a>
+        <a href="giftcollection.html">Gift Collection</a>
+        <a href="giftcollection.html">Personalized</a>
+        <a href="newarrivals.html">New Arrivals</a>
+      </div>
+      <div class="footer-col">
+        <h4>Policies</h4>
+        <a href="#" onclick="openFooterPopup('shippingPolicyPopup');return false;">Shipping Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="margin-bottom:14px;">Subscribe for early access to new arrivals.</p>
+        <div class="cart-coupon" style="max-width:240px;">
+          <input type="email" placeholder="Email address" style="background:rgba(255,246,232,.08);border-color:rgba(255,246,232,.25);color:var(--bg);">
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RUHMERAH. All rights reserved.</span>
+      <div class="pay-icons">
+        <span>PhonePe</span><span>UPI</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>Net Banking</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Cart Drawer -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Bag (<span id="cartItemCount">3</span>)</h3>
+    <button id="cartClose" style="font-size:20px;color:var(--muted);">✕</button>
+  </div>
+  <div class="cart-ship">
+    <p id="shipMsg">₹650 away from FREE SHIPPING</p>
+    <div class="ship-bar"><div class="ship-fill"></div></div>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-coupon">
+      <input type="text" placeholder="Coupon code">
+      <button>Apply</button>
+    </div>
+    <label class="cart-gift"><input type="checkbox" style="accent-color:var(--heading);"> Add a gift message</label>
+    <div class="cart-total"><span>Subtotal</span><span>₹6,847</span></div>
+    <a href="#" class="btn btn-primary">Proceed to Checkout</a>
+  </div>
+</div>
+
+<!-- Quick View Modal -->
+<div class="qv-modal" id="qvModal">
+  <div class="qv-inner">
+    <div class="qv-media" id="qvMedia"></div>
+    <div class="qv-body">
+      <button class="qv-close" id="qvClose">✕</button>
+      <span class="cat-label" id="qvCat">Earrings</span>
+      <h3 id="qvName">Sundari Gold Hoops</h3>
+      <div class="prod-price"><span class="price-now" id="qvPrice">₹2,499</span><span class="price-was" id="qvWas">₹3,199</span></div>
+      <div class="stars">★★★★★ <span style="color:var(--muted);">(128)</span></div>
+      <p class="qv-desc" id="qvDesc">Handcrafted 18k gold-plated hoops finished with a soft matte glow — light enough for everyday, elegant enough for evening.</p>
+      <div class="qv-highlights">
+        <span>Waterproof</span><span>Anti Tarnish</span><span>Hypoallergenic</span><span>Nickel Free</span>
+      </div>
+      <div class="qv-actions">
+        <button class="btn btn-primary" id="qvAddCart">Add to Bag</button>
+        <button class="btn btn-outline" id="qvWishlist">♡ Wishlist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Exit Intent Popup -->
+<div class="exit-popup" id="exitPopup">
+  <div class="exit-card">
+    <button class="exit-close" id="exitClose">✕</button>
+    <span class="eyebrow">Before You Go</span>
+    <h3>Here's 10% off.</h3>
+    <p>Subscribe now and we'll send a welcome code straight to your inbox.</p>
+    <form id="exitForm" style="display:flex;flex-direction:column;gap:12px;">
+      <input type="email" placeholder="Your email address" required style="padding:14px 20px;border-radius:30px;border:1px solid var(--border);background:var(--card);font-family:var(--font-body);outline:none;">
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Claim My Code</button>
+    </form>
+  </div>
+</div>
+
+<!-- Floating buttons -->
+<div class="float-btns">
+  <button class="fab fab-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="6 11 12 5 18 11"/></svg></button>
+  <a class="fab fab-whatsapp" 
+href="https://wa.me/917358252151" 
+target="_blank" 
+aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/><path d="M8.5 8.7c.2-.6.9-.5 1.3-.2.3.3.7 1.5 1 2 .2.4 0 .8-.3 1.1-.6.7.6 1.9 1.2 2.4.7.6 1.6.9 2.1.3.3-.3.7-.5 1.1-.3.5.3 1.6.8 1.9 1.1.3.3.3.9-.1 1.3-1.6 1.6-4.6.2-6.7-1.9-2.1-2.1-3.5-5-2-6.7z" fill="var(--bg)" stroke="none"/></svg></a>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Login Reminder Popup -->
+
+<div class="login-reminder" id="loginReminder">
+
+    <div class="login-reminder-card">
+
+        <button
+            class="login-reminder-close"
+            id="loginReminderClose"
+            aria-label="Close">
+            ✕
+        </button>
+
+        <span class="eyebrow">
+            Welcome to RUHMERAH
+        </span>
+
+        <h2>Make it yours.</h2>
+
+        <p>
+            Create your RUHMERAH account to save your wishlist,
+            track orders and enjoy a smoother shopping experience.
+        </p>
+
+        <div class="login-reminder-actions">
+
+            <a
+                href="account.html"
+                class="btn btn-primary login-reminder-login">
+                Login / Sign Up
+            </a>
+
+            <button
+                class="login-reminder-later"
+                id="loginReminderLater">
+                Not now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Customer Care Popup -->
+<div class="footer-popup" id="customerCarePopup">
+    <div class="footer-popup-card">
+        <button class="footer-popup-close" onclick="closeFooterPopup('customerCarePopup')" aria-label="Close">✕</button>
+        <span class="eyebrow">RUHMERAH Customer Care</span>
+        <h2>Customer Care</h2>
+        <p>We're here to help with anything about your order or a RUHMERAH piece.</p>
+        <a href="tel:+917358252151" class="footer-popup-phone">+91 7358252151</a>
+        <div class="footer-popup-actions">
+            <a href="tel:+917358252151" class="btn btn-primary footer-popup-call">Call Now</a>
+            <button class="footer-popup-later" onclick="closeFooterPopup('customerCarePopup')">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Track Order Popup -->
+<div class="footer-popup" id="trackOrderPopup">
+    <div class="footer-popup-card">
+        <button class="footer-popup-close" onclick="closeFooterPopup('trackOrderPopup')" aria-label="Close">✕</button>
+        <span class="eyebrow">Order Status</span>
+        <h2>Track Order</h2>
+        <p>Once your order is placed, we'll share your tracking ID with you on WhatsApp.</p>
+        <div class="footer-popup-actions">
+            <a href="https://wa.me/917358252151" target="_blank" rel="noopener" class="btn btn-primary footer-popup-call">Chat on WhatsApp</a>
+            <button class="footer-popup-later" onclick="closeFooterPopup('trackOrderPopup')">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Shipping Policy Popup -->
+<div class="footer-popup" id="shippingPolicyPopup">
+    <div class="footer-popup-card">
+        <button class="footer-popup-close" onclick="closeFooterPopup('shippingPolicyPopup')" aria-label="Close">✕</button>
+        <span class="eyebrow">Good to Know</span>
+        <h2>Shipping Policy</h2>
+        <p>We offer free shipping on all orders of ₹1499 and above. For orders below ₹1499, standard shipping charges apply at checkout.</p>
+        <div class="footer-popup-actions">
+            <a href="tel:+917358252151" class="btn btn-primary footer-popup-call">Call RUHMERAH</a>
+            <button class="footer-popup-later" onclick="closeFooterPopup('shippingPolicyPopup')">Close</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="index.js"></script>
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+<script>
+/* =========================
+   FOOTER INFO POPUPS
+   (Customer Care / Track Order / Shipping Policy)
+   ========================= */
+
+function openFooterPopup(id){
+    const popup = document.getElementById(id);
+    if(!popup) return;
+    popup.classList.add("show");
+    document.body.style.overflow = "hidden";
+}
+
+function closeFooterPopup(id){
+    const popup = document.getElementById(id);
+    if(!popup) return;
+    popup.classList.remove("show");
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const footerPopups = document.querySelectorAll(".footer-popup");
+
+    footerPopups.forEach(function(popup){
+
+        /* Click outside the card closes the popup */
+        popup.addEventListener("click", function(e){
+            if(e.target === popup){
+                closeFooterPopup(popup.id);
+            }
+        });
+
+    });
+
+    /* Escape key closes any open footer popup */
+    document.addEventListener("keydown", function(e){
+        if(e.key === "Escape"){
+            footerPopups.forEach(function(popup){
+                if(popup.classList.contains("show")){
+                    closeFooterPopup(popup.id);
+                }
+            });
+        }
+    });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    const popup = document.getElementById("loginReminder");
+    const laterBtn = document.getElementById("loginReminderLater");
+    const closeBtn = document.getElementById("loginReminderClose");
+
+    const DISMISS_KEY = "ruhmerahLoginDismissals";
+    const MAX_DISMISSALS = 3;
+
+    function getDismissals(){
+        return parseInt(
+            localStorage.getItem(DISMISS_KEY) || "0",
+            10
+        );
+    }
+
+    function showLoginReminder(){
+
+        const dismissals = getDismissals();
+
+        if(dismissals >= MAX_DISMISSALS){
+            return;
+        }
+
+        popup.classList.add("show");
+    }
+
+    function hidePopup(){
+        popup.classList.remove("show");
+    }
+
+    function dismissPopup(){
+
+        let dismissals = getDismissals();
+
+        dismissals++;
+
+        localStorage.setItem(
+            DISMISS_KEY,
+            dismissals.toString()
+        );
+
+        hidePopup();
+    }
+
+    laterBtn.addEventListener("click", dismissPopup);
+
+    closeBtn.addEventListener("click", dismissPopup);
+
+    popup.addEventListener("click", function(e){
+
+        if(e.target === popup){
+            dismissPopup();
+        }
+
+    });
+
+    /*
+       Show after 4 seconds
+    */
+
+    setTimeout(showLoginReminder, 4000);
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const heroShopBtn = document.getElementById("heroShopBtn");
+    const shopMegaWrap = document.getElementById("shopMegaWrap");
+    const navbarShop = document.getElementById("navbarShop");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const shopSubmenu = document.getElementById("shopSubmenu");
+
+    /* =========================
+       HERO SHOP BUTTON
+       ========================= */
+
+    if (heroShopBtn) {
+
+        heroShopBtn.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            /* MOBILE */
+            if (window.innerWidth <= 760) {
+
+                mobileMenu.classList.add("show");
+
+                if (shopSubmenu) {
+                    shopSubmenu.classList.add("open");
+                }
+
+            }
+
+            /* DESKTOP */
+            else {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+                setTimeout(function () {
+                    shopMegaWrap.classList.add("mobile-open");
+                }, 350);
+
+            }
+
+        });
+
+    }
+
+
+    /* =========================
+       NAVBAR SHOP BUTTON
+       ========================= */
+
+    if (navbarShop) {
+
+        navbarShop.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            /* Desktop */
+            if (window.innerWidth > 760) {
+
+                shopMegaWrap.classList.toggle("mobile-open");
+
+            }
+
+            /* Mobile */
+            else {
+
+                mobileMenu.classList.add("show");
+
+                if (shopSubmenu) {
+                    shopSubmenu.classList.toggle("open");
+                }
+
+            }
+
+        });
+
+    }
+
+});
+</script>
+
+<!-- =========================
+     NEW ARRIVALS: FILTER + CAROUSEL
+     ========================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.getElementById("arrivalsTrack");
+    const dotsWrap = document.getElementById("arrivalsDots");
+    const prevBtn = document.getElementById("arrivalsPrev");
+    const nextBtn = document.getElementById("arrivalsNext");
+    const tabsWrap = document.getElementById("arrivalsTabs");
+
+    if (!track || !dotsWrap || !tabsWrap) return;
+
+    const allCards = Array.from(track.children);
+
+    function getVisibleCards() {
+        return allCards.filter(function (card) {
+            return card.style.display !== "none";
+        });
+    }
+
+    function rebuildDots() {
+        dotsWrap.innerHTML = "";
+
+        const visible = getVisibleCards();
+
+        visible.forEach(function (card, i) {
+            const dot = document.createElement("button");
+            dot.className = "arrivals-dot";
+            dot.setAttribute("aria-label", "Go to product " + (i + 1));
+            if (i === 0) dot.classList.add("active");
+
+            dot.addEventListener("click", function () {
+                card.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+            });
+
+            dotsWrap.appendChild(dot);
+        });
+    }
+
+    function setActiveDotByIndex(index) {
+        Array.from(dotsWrap.children).forEach(function (d, i) {
+            d.classList.toggle("active", i === index);
+        });
+    }
+
+    let ticking = false;
+
+    function updateActiveFromScroll() {
+        const visible = getVisibleCards();
+        const trackLeft = track.getBoundingClientRect().left;
+
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+
+        visible.forEach(function (card, i) {
+            const distance = Math.abs(card.getBoundingClientRect().left - trackLeft);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = i;
+            }
+        });
+
+        setActiveDotByIndex(closestIndex);
+        ticking = false;
+    }
+
+    track.addEventListener("scroll", function () {
+        if (!ticking) {
+            window.requestAnimationFrame(updateActiveFromScroll);
+            ticking = true;
+        }
+    });
+
+    function scrollByOneCard(direction) {
+        const visible = getVisibleCards();
+        if (visible.length === 0) return;
+
+        const cardWidth = visible[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(track).gap) || 20;
+        track.scrollBy({ left: direction * (cardWidth + gap), behavior: "smooth" });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+            scrollByOneCard(-1);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+            scrollByOneCard(1);
+        });
+    }
+
+    // Filter tabs
+    const tabButtons = Array.from(tabsWrap.querySelectorAll(".tab-btn"));
+
+    tabButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const category = btn.dataset.category;
+
+            tabButtons.forEach(function (b) {
+                b.classList.toggle("active", b === btn);
+            });
+
+            allCards.forEach(function (card) {
+                card.style.display = (card.dataset.category === category) ? "" : "none";
+            });
+
+            track.scrollTo({ left: 0, behavior: "instant" });
+            rebuildDots();
+        });
+    });
+
+    // Initial state: first tab's category already visible via inline styles in the HTML
+    rebuildDots();
+
+});
+</script>
+
+<!-- =========================
+     BLOG CAROUSEL
+     ========================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.getElementById("blogTrack");
+    const dotsWrap = document.getElementById("blogDots");
+    const prevBtn = document.getElementById("blogPrev");
+    const nextBtn = document.getElementById("blogNext");
+
+    if (!track || !dotsWrap) return;
+
+    const slides = Array.from(track.children);
+    if (slides.length === 0) return;
+
+    slides.forEach(function (slide, i) {
+        const dot = document.createElement("button");
+        dot.className = "blog-dot";
+        dot.setAttribute("aria-label", "Go to article " + (i + 1));
+        if (i === 0) dot.classList.add("active");
+
+        dot.addEventListener("click", function () {
+            slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+        });
+
+        dotsWrap.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsWrap.children);
+
+    function setActiveDot(index) {
+        dots.forEach(function (d, i) {
+            d.classList.toggle("active", i === index);
+        });
+    }
+
+    let ticking = false;
+
+    function updateActiveFromScroll() {
+        const trackLeft = track.getBoundingClientRect().left;
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+
+        slides.forEach(function (slide, i) {
+            const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = i;
+            }
+        });
+
+        setActiveDot(closestIndex);
+        ticking = false;
+    }
+
+    track.addEventListener("scroll", function () {
+        if (!ticking) {
+            window.requestAnimationFrame(updateActiveFromScroll);
+            ticking = true;
+        }
+    });
+
+    function scrollByOneSlide(direction) {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(track).gap) || 24;
+        track.scrollBy({ left: direction * (slideWidth + gap), behavior: "smooth" });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+            scrollByOneSlide(-1);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+            scrollByOneSlide(1);
+        });
+    }
+
+});
+</script>
+
+<!-- =========================
+     CART + WISHLIST
+     (needed for New Arrivals' Add Cart / wishlist buttons)
+     ========================= -->
+<script type="module" src="cart.js"></script>
+<script src="wishlist.js"></script>
+
+<!-- =========================
+     REVIEWS: SUBMISSION + CAROUSEL
+     ========================= -->
+<script type="module" src="reviews.js"></script>
+
+<script type="module" src="subscriber.js"></script>
+
+</body>
+</html>
